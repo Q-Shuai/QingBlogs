@@ -1,0 +1,743 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>网页开发三件套(Html+CSS+Javascrit) + Tailwind 基础语法速览 | 🍀拾光卿筑🍀</title><meta name="keywords" content="HTML基础,CSS基础,JavaScript基础,Tailwind CSS基础,前端入门"><meta name="author" content="Qing"><meta name="copyright" content="Qing"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="网页开发三件套(Html+CSS+Javascrit) + Tailwind 基础语法速览"><meta name="application-name" content="网页开发三件套(Html+CSS+Javascrit) + Tailwind 基础语法速览"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta name="referrer" content="no-referrer"><meta property="og:type" content="article"><meta property="og:title" content="网页开发三件套(Html+CSS+Javascrit) + Tailwind 基础语法速览"><meta property="og:url" content="https://q-shuai.github.io/QingBlogs/2026/03/16/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E4%B8%89%E4%BB%B6%E5%A5%97-Html-CSS-Javascrit-Tailwind-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E9%80%9F%E8%A7%88/index.html"><meta property="og:site_name" content="🍀拾光卿筑🍀"><meta property="og:description" content="零基础也能看懂的前端入门教程，用通俗易懂的语言讲解HTML、CSS、JavaScript和Tailwind CSS的基础语法，帮你快速看懂网页代码、上手建站。"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://gitee.com/handsomeqing/pic/raw/master/image/html_css_javascript_tailwind_blog_profile.png"><meta property="article:author" content="Qing"><meta property="article:tag" content="独立站,跨境电商,DTC品牌,WordPress,Shopify,品牌出海,SEO,广告投放,选品策略,运营笔记,Qing"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://gitee.com/handsomeqing/pic/raw/master/image/html_css_javascript_tailwind_blog_profile.png"><meta name="description" content="零基础也能看懂的前端入门教程，用通俗易懂的语言讲解HTML、CSS、JavaScript和Tailwind CSS的基础语法，帮你快速看懂网页代码、上手建站。"><link rel="shortcut icon" href="/QingBlogs/favicon.ico"><link rel="canonical" href="https://q-shuai.github.io/QingBlogs/2026/03/16/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E4%B8%89%E4%BB%B6%E5%A5%97-Html-CSS-Javascrit-Tailwind-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E9%80%9F%E8%A7%88/"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/QingBlogs/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://img.cdn1.vip/i/6a50a244c6ba2_1783669316.webp"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/QingBlogs/',
+  preloader: {"source":3},
+  friends_vue_info: {"apiurl":null},
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["🤖️ 科技电脑爱好者","🔍 分享与热心帮助","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机"]},
+  algolia: {"appId":"KSIJ16IKKA","apiKey":"21b13f0b4c39926e022ca1acfa505090","indexName":"qingblogs","hits":{"per_page":6},"languages":{"input_placeholder":"输入关键词后按下回车查找","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: Qing","link":"链接: ","source":"来源: 🍀拾光卿筑🍀","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '🍀拾光卿筑🍀',
+  title: '网页开发三件套(Html+CSS+Javascrit) + Tailwind 基础语法速览',
+  postAI: '',
+  pageFillDescription: '网页开发三件套(Html+CSS+Javascrit) + Tailwind 基础语法速览, 适用场景, 前置条件, 一、HTML：骨架的语言, 标签长什么样, 属性的概念, 嵌套与层级, 二、CSS：衣服的语言, 选择器和声明, 给特定元素穿衣服：class 和 id, 盒模型——理解布局的基础, 常用 CSS 属性速查, 三、JavaScript：动作的语言, 变量——存东西的盒子, 函数——封装一段动作, 事件监听——等用户操作, 操作 HTML 元素, 四、Tailwind：写样式的快捷方式, 什么是 utility class, Tailwind 的命名规则, 对照表：Tailwind 到原生 CSS, 在 LiveCanvas 里直接用 Tailwind, 三件套怎么配合（一张图看懂）, 总结网页开发三件套基础语法速览如果你完全没碰过前端代码看到这种符号就头大那这篇就是为你写的我刚开始学建站时也一样打开浏览器的开发者工具看着一堆代码发懵后来发现根本不需要把前端从头到尾学一遍搞懂三件套各自管什么基本语法长什么样就已经能看懂的代码了这篇把的基础语法拆开用建站人的视角讲清楚读完这篇你再去读我写的实战篇也就是上一篇文章就不会觉得陌生了适用场景这个教程解决什么问题看到网页源代码一堆尖括号和花括号完全不知道从哪看起想自己改点页面样式但连是什么意思都不清楚准备学但担心自己不懂代码用不起来想知道到底谁管谁怎么配合谁适合看零基础或只听过名词的建站新人建议先看这篇再看建站人员必修课学习笔记实战篇两篇搭配着来效果最好前置条件一个浏览器或最好打开任意一个网页按下切换到面板你看到的那些代码就是愿意花分钟看完这篇文章不需要任何编程基础一骨架的语言标签长什么样的核心就是标签所有内容都用标签包起来标签名内容标签名一个标签由三部分组成开标签标签名告诉浏览器这开始了内容标签里装的东西闭标签标签名告诉浏览器这结束了拿现实例子来理解这是一段文字大标题小一点的标题代表段落代表标题后面的数字越大字号越小有些标签没有内容叫自闭合标签图片地址描述文字换行属性的概念标签还可以加属性用来描述标签的额外信息点我访问谷歌产品图片这里的都是属性链接跳转到哪里图片的来源路径图片的文字描述加载不出来时显示格式固定属性名属性值用空格隔开不同属性嵌套与层级的标签可以套娃标题一段文字包着和像俄罗斯套娃一样这种关系叫父子关系被包在里面的叫子元素包在外面的叫父元素我刚开始总是搞混闭标签的顺序记住一个口诀先开的后闭上面这个例子里先开那它就必须在最后才关闭二衣服的语言如果是人的骨架就是穿在身上的衣服决定颜色大小位置选择器和声明的基本语法选择器属性名属性值属性名属性值举个例子这句的意思是页面上所有标签文字颜色改成蓝色字号改成像素是选择器告诉你要给谁穿衣服和是属性名你要改什么和是属性值改成什么样子每条声明末尾要加分号这是规矩给特定元素穿衣服和光给标签统一改样式不够用你经常想只有这个按钮是蓝色那个按钮是红色这时候需要提交取消看到前面那个点了吗这是的规矩点号表示这是一个名称不加点号的话浏览器会以为你在说标签名盒模型理解布局的基础每个元素在浏览器里都是一个盒子外边距边框内边距内容从内到外内容文字或图片内边距内容到边框的距离边框边缘线外边距这个盒子到其他盒子的距离这是我踩过的坑一个设了再设实际占用的宽度是因为是在外面扩张的解决方法加一句告诉浏览器给我包含和常用属性速查属性作用示例文字颜色字号背景色宽高外边距内边距边框显示方式这个属性覆盖了日常的样式需求三动作的语言负责有什么负责长什么样负责发生什么变量存东西的盒子价格标题产品名称变量就是给一个值起个名字方便后面用里声明变量有三种方式最简单的方式先全用就行了后面自然能分清区别常见的变量类型数字数字文字你好字符串用引号包起来是或否布尔值数组数组一组数据函数封装一段动作函数就是把一段代码打包取个名字随时调用显示弹窗你好欢迎访问定义好了之后想用就在别处写一句显示弹窗弹窗就出现了函数可以接收参数打招呼名字你好名字打招呼张三弹窗显示你好张三事件监听等用户操作这个是建站用得最多的技能你告诉浏览器当用户做了某件事就执行某段代码你点了我翻译成大白话找到为的元素等它被点击的时候弹一个窗事件不仅可以是还有鼠标移上去鼠标移走输入框内容变了操作元素可以改的内容和样式改内容新标题改样式加删这几个操作我几乎是每天用特别是结合的就是展开收起效果的核心四写样式的快捷方式什么是传统写需要你做两步先在里给元素加名再到文件里写样式换了个思路把每个属性组合都做成一个现成的你直接在上拼就行传统方式内容然后是文件里写方式不用写文件内容就是就是就是的命名规则的名有规律可循学会了就能猜前缀含义示例解释内边距四边内边距左右左右内边距上下上下内边距外边距四边外边距单个方向的上外边距文字相关大号文字背景相关蓝色背景布局模式弹性布局圆角大圆角阴影中等阴影鼠标悬停时悬停时阴影变大屏幕尺寸断点平板以上文字变大对照表到原生相当于相当于相当于相当于相当于在里直接用我推荐在里用原因就一个省事你用拖拽做出一个后如果想微调间距不用打开面板直接在元素的里加或就行搭配插件默认加载了版本所以你打开编辑器就可以直接用什么额外配置都不用做三件套怎么配合一张图看懂做个按钮来举例你就明白怎么各司其职了告诉浏览器这有个按钮点击我通过写在上面了蓝色按钮白色文字圆角告诉浏览器点击这个按钮时弹个窗你点了我负责造出这个按钮负责让按钮变好看颜色间距圆角负责按钮被点击时做什么总结三句话总结这篇内容的结构和骨架记住标签名属性嵌套就够用外观和样式就是把写成名不用另写样式文件交互和动作新手记住就能做很多事情这三个角色分工明确各管各的看代码的时候先分清哪个部分是哪个是哪个是就不会觉得乱下一步去看我写的那篇实战篇建站人员必修课学习笔记实战篇里面把这三件套怎么在里真正落地讲得很细',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-07-16 20:09:48',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 8.1.2"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://img.cdn1.vip/i/6a507c78177d3_1783659640.webp"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://q-shuai.github.io/QingBlogs/" title="我的博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a51ba2cc92ae_1783740972.webp" alt="我的博客"/><span class="back-menu-item-text">我的博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">应用</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://img.scdn.io/" title="我的图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a51124d73ddd_1783697997.webp" alt="我的图床"/><span class="back-menu-item-text">我的图床</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">工具</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://globax-ai.vercel.app/" title="我的工具"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a51124fc1eb3_1783697999.webp" alt="我的工具"/><span class="back-menu-item-text">我的工具</span></a></div></div></div></div><a id="site-name" href="/QingBlogs/" accesskey="h"><div class="title">🍀拾光卿筑🍀</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-book faa-tada" style="font-size: 0.9em;"></i><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill faa-tada" style="font-size: 0.9em;"></i><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-house-chimney faa-tada" style="font-size: 0.9em;"></i><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-info faa-tada" style="font-size: 0.9em;"></i><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/QingBlogs/tags/CSS/" style="font-size: 1.05rem;">CSS<sup>1</sup></a><a href="/QingBlogs/tags/HTML/" style="font-size: 1.05rem;">HTML<sup>1</sup></a><a href="/QingBlogs/tags/JavaScript/" style="font-size: 1.05rem;">JavaScript<sup>1</sup></a><a href="/QingBlogs/tags/SEO/" style="font-size: 1.05rem;">SEO<sup>1</sup></a><a href="/QingBlogs/tags/SEO%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">SEO工具<sup>1</sup></a><a href="/QingBlogs/tags/Tailwind/" style="font-size: 1.05rem;">Tailwind<sup>1</sup></a><a href="/QingBlogs/tags/%E5%85%B3%E9%94%AE%E8%AF%8D%E8%B0%83%E7%A0%94/" style="font-size: 1.05rem;">关键词调研<sup>1</sup></a><a href="/QingBlogs/tags/%E5%86%85%E5%AE%B9%E4%BC%98%E5%8C%96/" style="font-size: 1.05rem;">内容优化<sup>1</sup></a><a href="/QingBlogs/tags/%E5%89%AA%E6%98%A0/" style="font-size: 1.05rem;">剪映<sup>1</sup></a><a href="/QingBlogs/tags/%E5%89%AA%E8%BE%91%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" style="font-size: 1.05rem;">剪辑零基础教程<sup>1</sup></a><a href="/QingBlogs/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" style="font-size: 1.05rem;">基础语法<sup>1</sup></a><a href="/QingBlogs/tags/%E5%A4%96%E9%93%BE%E5%BB%BA%E8%AE%BE/" style="font-size: 1.05rem;">外链建设<sup>1</sup></a><a href="/QingBlogs/tags/%E5%BB%BA%E7%AB%99%E5%85%A5%E9%97%A8/" style="font-size: 1.05rem;">建站入门<sup>1</sup></a><a href="/QingBlogs/tags/%E6%8A%80%E6%9C%AFSEO/" style="font-size: 1.05rem;">技术SEO<sup>1</sup></a><a href="/QingBlogs/tags/%E8%A7%86%E9%A2%91%E7%BC%96%E8%BE%91/" style="font-size: 1.05rem;">视频编辑<sup>1</sup></a><a href="/QingBlogs/tags/%E9%A1%B5%E9%9D%A2SEO/" style="font-size: 1.05rem;">页面SEO<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/QingBlogs/archives/2026/03/"><span class="card-archive-list-date">三月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/QingBlogs/archives/2024/07/"><span class="card-archive-list-date">七月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/QingBlogs/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url">学习笔记</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/QingBlogs/tags/HTML/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>HTML</span></a><a class="article-meta__tags" href="/QingBlogs/tags/CSS/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>CSS</span></a><a class="article-meta__tags" href="/QingBlogs/tags/JavaScript/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>JavaScript</span></a><a class="article-meta__tags" href="/QingBlogs/tags/Tailwind/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Tailwind</span></a><a class="article-meta__tags" href="/QingBlogs/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>基础语法</span></a><a class="article-meta__tags" href="/QingBlogs/tags/%E5%BB%BA%E7%AB%99%E5%85%A5%E9%97%A8/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>建站入门</span></a></span></div></div><h1 class="post-title" itemprop="name headline">网页开发三件套(Html+CSS+Javascrit) + Tailwind 基础语法速览</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2026-03-16T11:41:19.000Z" title="发表于 2026-03-16 19:41:19">2026-03-16</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2026-07-16T12:09:48.738Z" title="更新于 2026-07-16 20:09:48">2026-07-16</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">2.8k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>10分钟</span></span><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="网页开发三件套(Html+CSS+Javascrit) + Tailwind 基础语法速览"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为广州"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>广州</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://gitee.com/handsomeqing/pic/raw/master/image/html_css_javascript_tailwind_blog_profile.png"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://q-shuai.github.io/QingBlogs/2026/03/16/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E4%B8%89%E4%BB%B6%E5%A5%97-Html-CSS-Javascrit-Tailwind-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E9%80%9F%E8%A7%88/"><header><a class="post-meta-categories" href="/QingBlogs/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url">学习笔记</a><a href="/QingBlogs/tags/HTML/" tabindex="-1" itemprop="url">HTML</a><a href="/QingBlogs/tags/CSS/" tabindex="-1" itemprop="url">CSS</a><a href="/QingBlogs/tags/JavaScript/" tabindex="-1" itemprop="url">JavaScript</a><a href="/QingBlogs/tags/Tailwind/" tabindex="-1" itemprop="url">Tailwind</a><a href="/QingBlogs/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" tabindex="-1" itemprop="url">基础语法</a><a href="/QingBlogs/tags/%E5%BB%BA%E7%AB%99%E5%85%A5%E9%97%A8/" tabindex="-1" itemprop="url">建站入门</a><h1 id="CrawlerTitle" itemprop="name headline">网页开发三件套(Html+CSS+Javascrit) + Tailwind 基础语法速览</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">Qing</span><time itemprop="dateCreated datePublished" datetime="2026-03-16T11:41:19.000Z" title="发表于 2026-03-16 19:41:19">2026-03-16</time><time itemprop="dateCreated datePublished" datetime="2026-07-16T12:09:48.738Z" title="更新于 2026-07-16 20:09:48">2026-07-16</time></header><h1 id="网页开发三件套-Html-CSS-Javascrit-Tailwind-基础语法速览"><a href="#网页开发三件套-Html-CSS-Javascrit-Tailwind-基础语法速览" class="headerlink" title="网页开发三件套(Html+CSS+Javascrit) + Tailwind 基础语法速览"></a>网页开发三件套(Html+CSS+Javascrit) + Tailwind 基础语法速览</h1><p>如果你完全没碰过前端代码，看到 &lt;div class&#x3D;’…’&gt; 这种符号就头大，那这篇就是为你写的。</p>
+<p>我刚开始学建站时也一样，打开浏览器的开发者工具看着一堆代码发懵。后来发现，根本不需要把前端从头到尾学一遍——<strong>搞懂三件套各自管什么、基本语法长什么样，就已经能看懂 80% 的代码了</strong>。</p>
+<p>这篇把 HTML、CSS、JavaScript、Tailwind 的基础语法拆开，用建站人的视角讲清楚。读完这篇，你再去读我写的实战篇（也就是上一篇文章），就不会觉得陌生了。</p>
+<hr>
+<h2 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h2><p>这个教程解决什么问题：</p>
+<ul>
+<li>看到网页源代码一堆尖括号和花括号，完全不知道从哪看起</li>
+<li>想自己改点页面样式，但连 class 是什么意思都不清楚</li>
+<li>准备学 LiveCanvas，但担心自己不懂代码用不起来</li>
+<li>想知道 HTML、CSS、JS 到底谁管谁、怎么配合</li>
+</ul>
+<p><strong>谁适合看</strong>：零基础或只听过名词的建站新人。</p>
+<p><strong>建议先看这篇，再看《建站人员必修课：HTML+CSS+JS+Tailwind学习笔记（LiveCanvas 实战篇）》</strong>。两篇搭配着来，效果最好。</p>
+<hr>
+<h2 id="前置条件"><a href="#前置条件" class="headerlink" title="前置条件"></a>前置条件</h2><ul>
+<li>一个浏览器（Chrome 或 Edge 最好）</li>
+<li>打开任意一个网页，按下 F12，切换到 Elements 面板——你看到的那些代码就是 HTML</li>
+<li>愿意花 15 分钟看完这篇文章</li>
+<li>不需要任何编程基础</li>
+</ul>
+<hr>
+<h2 id="一、HTML：骨架的语言"><a href="#一、HTML：骨架的语言" class="headerlink" title="一、HTML：骨架的语言"></a>一、HTML：骨架的语言</h2><h3 id="标签长什么样"><a href="#标签长什么样" class="headerlink" title="标签长什么样"></a>标签长什么样</h3><p>HTML 的核心就是<strong>标签</strong>。所有内容都用标签包起来。</p>
+<p><code>&lt;标签名&gt;内容&lt;/标签名&gt;</code></p>
+<p>一个标签由三部分组成：</p>
+<ul>
+<li><strong>开标签</strong>：&lt;标签名&gt;，告诉浏览器「这开始了」</li>
+<li><strong>内容</strong>：标签里装的东西</li>
+<li><strong>闭标签</strong>：&lt;&#x2F;标签名&gt;，告诉浏览器「这结束了」</li>
+</ul>
+<p>拿现实例子来理解：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一段文字<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>大标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>小一点的标题<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>&lt;p&gt; 代表 paragraph（段落），&lt;h1&gt; 代表 heading（标题）。h 后面的数字越大，字号越小。</p>
+</blockquote>
+<p>有些标签没有内容，叫自闭合标签：</p>
+<p><code>&lt;img src=&#39;图片地址.jpg&#39; alt=&#39;描述文字&#39; /&gt; &lt;br /&gt;  &lt;!-- 换行 --&gt;</code></p>
+<h3 id="属性的概念"><a href="#属性的概念" class="headerlink" title="属性的概念"></a>属性的概念</h3><p>标签还可以加<strong>属性</strong>，用来描述标签的额外信息：</p>
+<p><code>&lt;a href=&#39;https://google.com&#39;&gt;点我访问谷歌&lt;/a&gt; &lt;img src=&#39;product.jpg&#39; alt=&#39;产品图片&#39; /&gt;</code></p>
+<p>这里的 href、src、alt 都是属性：</p>
+<ul>
+<li>href：链接跳转到哪里</li>
+<li>src：图片的来源路径</li>
+<li>alt：图片的文字描述（加载不出来时显示）</li>
+</ul>
+<p><strong>格式固定</strong>：属性名&#x3D;’属性值’（用空格隔开不同属性）</p>
+<h3 id="嵌套与层级"><a href="#嵌套与层级" class="headerlink" title="嵌套与层级"></a>嵌套与层级</h3><p>HTML 的标签可以<strong>套娃</strong>：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>标题<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>一段文字<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>&lt;div&gt; 包着 &lt;h2&gt; 和 &lt;p&gt;，像俄罗斯套娃一样。这种关系叫<strong>父子关系</strong>。被包在里面的叫「子元素」，包在外面的叫「父元素」。</p>
+</blockquote>
+<p>我刚开始总是搞混闭标签的顺序。记住一个口诀：<strong>先开的后闭</strong>。上面这个例子里，&lt;div&gt; 先开，那它就必须在最后才关闭。</p>
+<hr>
+<h2 id="二、CSS：衣服的语言"><a href="#二、CSS：衣服的语言" class="headerlink" title="二、CSS：衣服的语言"></a>二、CSS：衣服的语言</h2><p>如果 HTML 是人的骨架，CSS 就是穿在身上的衣服——决定颜色、大小、位置。</p>
+<h3 id="选择器和声明"><a href="#选择器和声明" class="headerlink" title="选择器和声明"></a>选择器和声明</h3><p>CSS 的基本语法：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">选择器 &#123;</span><br><span class="line">    属性名: 属性值;</span><br><span class="line">    属性名: 属性值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>举个例子：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: blue;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">24px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这句 CSS 的意思是：<strong>页面上所有 &lt;h1&gt; 标签，文字颜色改成蓝色，字号改成 24 像素</strong>。</p>
+<ul>
+<li>h1 是<strong>选择器</strong>——告诉 CSS「你要给谁穿衣服」</li>
+<li>color 和 font-size 是<strong>属性名</strong>——「你要改什么」</li>
+<li>blue 和 24px 是<strong>属性值</strong>——「改成什么样子」</li>
+<li>每条声明末尾要加<strong>分号 ;</strong>，这是规矩</li>
+</ul>
+<h3 id="给特定元素穿衣服：class-和-id"><a href="#给特定元素穿衣服：class-和-id" class="headerlink" title="给特定元素穿衣服：class 和 id"></a>给特定元素穿衣服：class 和 id</h3><p>光给标签统一改样式不够用，你经常想「只有这个按钮是蓝色，那个按钮是红色」。这时候需要 <strong>class</strong>：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&#x27;btn-primary&#x27;</span>&gt;</span>提交<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&#x27;btn-secondary&#x27;</span>&gt;</span>取消<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.btn-primary</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.btn-secondary</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: gray;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>看到 class 前面那个点 . 了吗？这是 CSS 的规矩：<strong>点号表示「这是一个 class 名称」</strong>。不加点号的话，浏览器会以为你在说 HTML 标签名。</p>
+<h3 id="盒模型——理解布局的基础"><a href="#盒模型——理解布局的基础" class="headerlink" title="盒模型——理解布局的基础"></a>盒模型——理解布局的基础</h3><p>每个 HTML 元素在浏览器里都是一个<strong>盒子</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">┌──────────────────┐</span><br><span class="line">│   外边距 margin    │</span><br><span class="line">│  ┌────────────┐  │</span><br><span class="line">│  │  边框 border  │  │</span><br><span class="line">│  │ ┌────────┐ │  │</span><br><span class="line">│  │ │内边距pad│ │  │</span><br><span class="line">│  │ │ ┌────┐ │ │  │</span><br><span class="line">│  │ │ │内容│ │ │  │</span><br><span class="line">│  │ │ └────┘ │ │  │</span><br><span class="line">│  │ │        │ │  │</span><br><span class="line">│  │ └────────┘ │  │</span><br><span class="line">│  │           │  │</span><br><span class="line">│  └───────────┘  │</span><br><span class="line">│                 │</span><br><span class="line">└──────────────────┘</span><br></pre></td></tr></table></figure>
+
+<p>从内到外：</p>
+<ul>
+<li><strong>内容</strong>：文字或图片</li>
+<li><strong>padding（内边距）</strong>：内容到边框的距离</li>
+<li><strong>border（边框）</strong>：边缘线</li>
+<li><strong>margin（外边距）</strong>：这个盒子到其他盒子的距离</li>
+</ul>
+<p><strong>这是我踩过的坑</strong>：一个 div 设了 width: 200px，再设 padding: 20px，实际占用的宽度是 200 + 20 + 20 &#x3D; 240px！因为 padding 是在 width 外面扩张的。解决方法：加一句 box-sizing: border-box，告诉浏览器「width 给我包含 padding 和 border」。</p>
+<h3 id="常用-CSS-属性速查"><a href="#常用-CSS-属性速查" class="headerlink" title="常用 CSS 属性速查"></a>常用 CSS 属性速查</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>作用</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>color</td>
+<td>文字颜色</td>
+<td>color: red;</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>字号</td>
+<td>font-size: 16px;</td>
+</tr>
+<tr>
+<td>background-color</td>
+<td>背景色</td>
+<td>background-color: #f0f0f0;</td>
+</tr>
+<tr>
+<td>width &#x2F; height</td>
+<td>宽高</td>
+<td>width: 100%;</td>
+</tr>
+<tr>
+<td>margin</td>
+<td>外边距</td>
+<td>margin: 10px;</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>内边距</td>
+<td>padding: 20px;</td>
+</tr>
+<tr>
+<td>border</td>
+<td>边框</td>
+<td>border: 1px solid black;</td>
+</tr>
+<tr>
+<td>display</td>
+<td>显示方式</td>
+<td>display: flex;</td>
+</tr>
+</tbody></table>
+<p>这 8 个属性覆盖了日常 80% 的样式需求。</p>
+<hr>
+<h2 id="三、JavaScript：动作的语言"><a href="#三、JavaScript：动作的语言" class="headerlink" title="三、JavaScript：动作的语言"></a>三、JavaScript：动作的语言</h2><p>HTML 负责「有什么」，CSS 负责「长什么样」，JS 负责「发生什么」。</p>
+<h3 id="变量——存东西的盒子"><a href="#变量——存东西的盒子" class="headerlink" title="变量——存东西的盒子"></a>变量——存东西的盒子</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> 价格 = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">var</span> 标题 = <span class="string">&#x27;产品名称&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>变量就是给一个值起个名字，方便后面用。JavaScript 里声明变量有三种方式：var、let、const。最简单的方式：先全用 var 就行了，后面自然能分清区别。</p>
+<p>常见的变量类型：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> 数字 = <span class="number">100</span>;          <span class="comment">// 数字</span></span><br><span class="line"><span class="keyword">var</span> 文字 = <span class="string">&#x27;你好&#x27;</span>;       <span class="comment">// 字符串（用引号包起来）</span></span><br><span class="line"><span class="keyword">var</span> 是或否 = <span class="literal">true</span>;       <span class="comment">// 布尔值（true/false）</span></span><br><span class="line"><span class="keyword">var</span> 数组 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];   <span class="comment">// 数组（一组数据）</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="函数——封装一段动作"><a href="#函数——封装一段动作" class="headerlink" title="函数——封装一段动作"></a>函数——封装一段动作</h3><p>函数就是把一段代码打包，取个名字，随时调用：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> 显示弹窗() &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&#x27;你好，欢迎访问！&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>定义好了之后，想用就在别处写一句：</p>
+<p><code>显示弹窗();  // 弹窗就出现了</code></p>
+<p>函数可以接收参数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> 打招呼(名字) &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&#x27;你好，&#x27;</span> + 名字);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">打招呼(<span class="string">&#x27;张三&#x27;</span>);  <span class="comment">// 弹窗显示：你好，张三</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="事件监听——等用户操作"><a href="#事件监听——等用户操作" class="headerlink" title="事件监听——等用户操作"></a>事件监听——等用户操作</h3><p>这个是建站用得最多的 JS 技能。你告诉浏览器：<strong>当用户做了某件事，就执行某段代码</strong>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;myButton&#x27;</span>).<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&#x27;你点了我&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>翻译成大白话：<strong>找到 id 为 myButton 的元素，等它被点击的时候，弹一个窗</strong>。</p>
+<p>事件不仅可以是 click，还有：</p>
+<ul>
+<li>mouseenter：鼠标移上去</li>
+<li>mouseleave：鼠标移走</li>
+<li>change：输入框内容变了</li>
+</ul>
+<h3 id="操作-HTML-元素"><a href="#操作-HTML-元素" class="headerlink" title="操作 HTML 元素"></a>操作 HTML 元素</h3><p>JS 可以改 HTML 的内容和样式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 改内容</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;title&#x27;</span>).<span class="property">textContent</span> = <span class="string">&#x27;新标题&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 改样式</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;box&#x27;</span>).<span class="property">style</span>.<span class="property">backgroundColor</span> = <span class="string">&#x27;red&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 加/删 class</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;box&#x27;</span>).<span class="property">classList</span>.<span class="title function_">add</span>(<span class="string">&#x27;hidden&#x27;</span>);</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;box&#x27;</span>).<span class="property">classList</span>.<span class="title function_">remove</span>(<span class="string">&#x27;hidden&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>这几个操作我几乎是每天用。特别是 classList.add&#x2F;remove，结合 Tailwind 的 hidden class，就是展开收起效果的核心。</p>
+<hr>
+<h2 id="四、Tailwind：写样式的快捷方式"><a href="#四、Tailwind：写样式的快捷方式" class="headerlink" title="四、Tailwind：写样式的快捷方式"></a>四、Tailwind：写样式的快捷方式</h2><h3 id="什么是-utility-class"><a href="#什么是-utility-class" class="headerlink" title="什么是 utility class"></a>什么是 utility class</h3><p>传统写 CSS 需要你做两步：先在 HTML 里给元素加 class 名，再到 CSS 文件里写样式。</p>
+<p>Tailwind 换了个思路：<strong>把每个 CSS 属性组合都做成一个现成的 class，你直接在 HTML 上拼 class 就行</strong>。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 传统方式 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;card&#x27;</span>&gt;</span>内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 然后是 CSS 文件里写 .card &#123; padding: 16px; background: white; border-radius: 8px; &#125; --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Tailwind 方式：不用写 CSS 文件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;p-4 bg-white rounded-lg&#x27;</span>&gt;</span>内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>p-4 就是 padding: 16px，bg-white 就是 background-color: white，rounded-lg 就是 border-radius: 8px。</p>
+</blockquote>
+<h3 id="Tailwind-的命名规则"><a href="#Tailwind-的命名规则" class="headerlink" title="Tailwind 的命名规则"></a>Tailwind 的命名规则</h3><p>Tailwind 的 class 名有规律可循，学会了就能猜：</p>
+<table>
+<thead>
+<tr>
+<th>前缀</th>
+<th>含义</th>
+<th>示例</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>p-</td>
+<td>padding（内边距）</td>
+<td>p-4</td>
+<td>四边内边距 16px</td>
+</tr>
+<tr>
+<td>px-</td>
+<td>左右 padding</td>
+<td>px-6</td>
+<td>左右内边距 24px</td>
+</tr>
+<tr>
+<td>py-</td>
+<td>上下 padding</td>
+<td>py-3</td>
+<td>上下内边距 12px</td>
+</tr>
+<tr>
+<td>m-</td>
+<td>margin（外边距）</td>
+<td>m-2</td>
+<td>四边外边距 8px</td>
+</tr>
+<tr>
+<td>mt- &#x2F; mb- &#x2F; ml- &#x2F; mr-</td>
+<td>单个方向的 margin</td>
+<td>mt-4</td>
+<td>上外边距 16px</td>
+</tr>
+<tr>
+<td>text-</td>
+<td>文字相关</td>
+<td>text-lg</td>
+<td>大号文字</td>
+</tr>
+<tr>
+<td>bg-</td>
+<td>背景相关</td>
+<td>bg-blue-500</td>
+<td>蓝色背景</td>
+</tr>
+<tr>
+<td>flex &#x2F; grid</td>
+<td>布局模式</td>
+<td>flex</td>
+<td>弹性布局</td>
+</tr>
+<tr>
+<td>rounded-</td>
+<td>圆角</td>
+<td>rounded-xl</td>
+<td>大圆角</td>
+</tr>
+<tr>
+<td>shadow-</td>
+<td>阴影</td>
+<td>shadow-md</td>
+<td>中等阴影</td>
+</tr>
+<tr>
+<td>hover:</td>
+<td>鼠标悬停时</td>
+<td>hover:shadow-lg</td>
+<td>悬停时阴影变大</td>
+</tr>
+<tr>
+<td>md: &#x2F; lg:</td>
+<td>屏幕尺寸断点</td>
+<td>md:text-lg</td>
+<td>平板以上文字变大</td>
+</tr>
+</tbody></table>
+<h3 id="对照表：Tailwind-到原生-CSS"><a href="#对照表：Tailwind-到原生-CSS" class="headerlink" title="对照表：Tailwind 到原生 CSS"></a>对照表：Tailwind 到原生 CSS</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Tailwind: bg-blue-500 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 相当于 CSS: background-color: #3b82f6; --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Tailwind: p-4 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 相当于 CSS: padding: 16px; --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Tailwind: text-center --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 相当于 CSS: text-align: center; --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Tailwind: flex items-center justify-between --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 相当于 CSS: display: flex; align-items: center; justify-content: space-between; --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Tailwind: rounded-lg shadow-md --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 相当于 CSS: border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="在-LiveCanvas-里直接用-Tailwind"><a href="#在-LiveCanvas-里直接用-Tailwind" class="headerlink" title="在 LiveCanvas 里直接用 Tailwind"></a>在 LiveCanvas 里直接用 Tailwind</h3><p>我推荐在 LiveCanvas 里用 Tailwind，原因就一个——<strong>省事</strong>。</p>
+<p>你用拖拽做出一个 section 后，如果想微调间距，不用打开 CSS 面板，直接在元素的 class 里加 p-6 或 mt-4 就行。LiveCanvas 搭配 WindPress插件，默认加载了 Tailwind 版本，所以你打开编辑器就可以直接用，什么额外配置都不用做。</p>
+<hr>
+<h2 id="三件套怎么配合（一张图看懂）"><a href="#三件套怎么配合（一张图看懂）" class="headerlink" title="三件套怎么配合（一张图看懂）"></a>三件套怎么配合（一张图看懂）</h2><p>做个按钮来举例，你就明白 HTML + CSS + JS 怎么各司其职了：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- HTML：告诉浏览器「这有个按钮」 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">&#x27;myBtn&#x27;</span> <span class="attr">class</span>=<span class="string">&#x27;bg-blue-600 text-white px-6 py-3 rounded-lg&#x27;</span>&gt;</span></span><br><span class="line">    点击我</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- CSS（通过 Tailwind class 写在上面了）：蓝色按钮、白色文字、圆角 --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- JS：告诉浏览器「点击这个按钮时弹个窗」 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;myBtn&#x27;</span>).<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="keyword">function</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="title function_">alert</span>(<span class="string">&#x27;你点了我！&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">    &#125;);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>HTML</strong> 负责造出这个按钮</li>
+<li><strong>Tailwind</strong> 负责让按钮变好看（颜色、间距、圆角）</li>
+<li><strong>JS</strong> 负责按钮被点击时做什么</li>
+</ul>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>三句话总结这篇：</p>
+<ol>
+<li><strong>HTML</strong> &#x3D; 内容的结构和骨架，记住标签名 + 属性 + 嵌套就够用</li>
+<li><strong>CSS &#x2F; Tailwind</strong> &#x3D; 外观和样式，Tailwind 就是「把 CSS 写成 class 名」，不用另写样式文件</li>
+<li><strong>JavaScript</strong> &#x3D; 交互和动作，新手记住 addEventListener + classList 就能做很多事情</li>
+</ol>
+<p>这三个角色分工明确，各管各的。看代码的时候，先分清「哪个部分是 HTML？哪个是 CSS？哪个是 JS？」，就不会觉得乱。</p>
+<p>下一步，去看我写的那篇实战篇《建站人员必修课：HTML+CSS+JS+Tailwind 学习笔记（LiveCanvas 实战篇）》，里面把这三件套怎么在 LiveCanvas 里真正落地讲得很细。</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/QingBlogs/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a507c78177d3_1783659640.webp" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a507c78177d3_1783659640.webp" title="头像" alt="头像"></a><div class="post-copyright__author_name">Qing</div><div class="post-copyright__author_desc"></div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://q-shuai.github.io/QingBlogs/2026/03/16/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E4%B8%89%E4%BB%B6%E5%A5%97-Html-CSS-Javascrit-Tailwind-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E9%80%9F%E8%A7%88/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://q-shuai.github.io/QingBlogs/2026/03/16/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E4%B8%89%E4%BB%B6%E5%A5%97-Html-CSS-Javascrit-Tailwind-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E9%80%9F%E8%A7%88/')">网页开发三件套(Html+CSS+Javascrit) + Tailwind 基础语法速览</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://q-shuai.github.io/QingBlogs/2026/03/16/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E4%B8%89%E4%BB%B6%E5%A5%97-Html-CSS-Javascrit-Tailwind-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E9%80%9F%E8%A7%88/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=网页开发三件套(Html+CSS+Javascrit) + Tailwind 基础语法速览&amp;url=https://q-shuai.github.io/QingBlogs/2026/03/16/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E4%B8%89%E4%BB%B6%E5%A5%97-Html-CSS-Javascrit-Tailwind-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E9%80%9F%E8%A7%88/&amp;pic=https://gitee.com/handsomeqing/pic/raw/master/image/html_css_javascript_tailwind_blog_profile.png" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://q-shuai.github.io/QingBlogs" target="_blank">🍀拾光卿筑🍀</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/QingBlogs/tags/HTML/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>HTML<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/QingBlogs/tags/CSS/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>CSS<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/QingBlogs/tags/JavaScript/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>JavaScript<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/QingBlogs/tags/Tailwind/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Tailwind<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/QingBlogs/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>基础语法<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/QingBlogs/tags/%E5%BB%BA%E7%AB%99%E5%85%A5%E9%97%A8/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>建站入门<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://gitee.com/handsomeqing/pic/raw/master/image/html_css_javascript_tailwind_blog_profile.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/QingBlogs/2026/03/13/SEO%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a53c60808351_1783875080.webp" onerror="onerror=null;src='/QingBlogs/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">SEO基础入门教程</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a507c78177d3_1783659640.webp" onerror="this.onerror=null;this.src='/QingBlogs/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description">我是Qing, 在这里记录从0到1学习独立站建站与运营的全过程. 从技术选型到流量变现, 从选品策略到品牌塑造, 每一个踏过的坑都是通往自由的阶梯.</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/QingBlogs/"><h1 class="author-info__name">Qing</h1><div class="author-info__desc"></div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/Q-Shuai" target="_blank" title="Github"></a></div></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://img.cdn1.vip/i/6a511c55bd40b_1783700565.webp) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E4%B8%89%E4%BB%B6%E5%A5%97-Html-CSS-Javascrit-Tailwind-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E9%80%9F%E8%A7%88"><span class="toc-number">1.</span> <span class="toc-text">网页开发三件套(Html+CSS+Javascrit) + Tailwind 基础语法速览</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">1.1.</span> <span class="toc-text">适用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E6%9D%A1%E4%BB%B6"><span class="toc-number">1.2.</span> <span class="toc-text">前置条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81HTML%EF%BC%9A%E9%AA%A8%E6%9E%B6%E7%9A%84%E8%AF%AD%E8%A8%80"><span class="toc-number">1.3.</span> <span class="toc-text">一、HTML：骨架的语言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE%E9%95%BF%E4%BB%80%E4%B9%88%E6%A0%B7"><span class="toc-number">1.3.1.</span> <span class="toc-text">标签长什么样</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">1.3.2.</span> <span class="toc-text">属性的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B5%8C%E5%A5%97%E4%B8%8E%E5%B1%82%E7%BA%A7"><span class="toc-number">1.3.3.</span> <span class="toc-text">嵌套与层级</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81CSS%EF%BC%9A%E8%A1%A3%E6%9C%8D%E7%9A%84%E8%AF%AD%E8%A8%80"><span class="toc-number">1.4.</span> <span class="toc-text">二、CSS：衣服的语言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8%E5%92%8C%E5%A3%B0%E6%98%8E"><span class="toc-number">1.4.1.</span> <span class="toc-text">选择器和声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%99%E7%89%B9%E5%AE%9A%E5%85%83%E7%B4%A0%E7%A9%BF%E8%A1%A3%E6%9C%8D%EF%BC%9Aclass-%E5%92%8C-id"><span class="toc-number">1.4.2.</span> <span class="toc-text">给特定元素穿衣服：class 和 id</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%92%E6%A8%A1%E5%9E%8B%E2%80%94%E2%80%94%E7%90%86%E8%A7%A3%E5%B8%83%E5%B1%80%E7%9A%84%E5%9F%BA%E7%A1%80"><span class="toc-number">1.4.3.</span> <span class="toc-text">盒模型——理解布局的基础</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8-CSS-%E5%B1%9E%E6%80%A7%E9%80%9F%E6%9F%A5"><span class="toc-number">1.4.4.</span> <span class="toc-text">常用 CSS 属性速查</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81JavaScript%EF%BC%9A%E5%8A%A8%E4%BD%9C%E7%9A%84%E8%AF%AD%E8%A8%80"><span class="toc-number">1.5.</span> <span class="toc-text">三、JavaScript：动作的语言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E2%80%94%E2%80%94%E5%AD%98%E4%B8%9C%E8%A5%BF%E7%9A%84%E7%9B%92%E5%AD%90"><span class="toc-number">1.5.1.</span> <span class="toc-text">变量——存东西的盒子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E2%80%94%E2%80%94%E5%B0%81%E8%A3%85%E4%B8%80%E6%AE%B5%E5%8A%A8%E4%BD%9C"><span class="toc-number">1.5.2.</span> <span class="toc-text">函数——封装一段动作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC%E2%80%94%E2%80%94%E7%AD%89%E7%94%A8%E6%88%B7%E6%93%8D%E4%BD%9C"><span class="toc-number">1.5.3.</span> <span class="toc-text">事件监听——等用户操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C-HTML-%E5%85%83%E7%B4%A0"><span class="toc-number">1.5.4.</span> <span class="toc-text">操作 HTML 元素</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81Tailwind%EF%BC%9A%E5%86%99%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F"><span class="toc-number">1.6.</span> <span class="toc-text">四、Tailwind：写样式的快捷方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-utility-class"><span class="toc-number">1.6.1.</span> <span class="toc-text">什么是 utility class</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tailwind-%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="toc-number">1.6.2.</span> <span class="toc-text">Tailwind 的命名规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E7%85%A7%E8%A1%A8%EF%BC%9ATailwind-%E5%88%B0%E5%8E%9F%E7%94%9F-CSS"><span class="toc-number">1.6.3.</span> <span class="toc-text">对照表：Tailwind 到原生 CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8-LiveCanvas-%E9%87%8C%E7%9B%B4%E6%8E%A5%E7%94%A8-Tailwind"><span class="toc-number">1.6.4.</span> <span class="toc-text">在 LiveCanvas 里直接用 Tailwind</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E4%BB%B6%E5%A5%97%E6%80%8E%E4%B9%88%E9%85%8D%E5%90%88%EF%BC%88%E4%B8%80%E5%BC%A0%E5%9B%BE%E7%9C%8B%E6%87%82%EF%BC%89"><span class="toc-number">1.7.</span> <span class="toc-text">三件套怎么配合（一张图看懂）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.8.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/QingBlogs/2026/03/16/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E4%B8%89%E4%BB%B6%E5%A5%97-Html-CSS-Javascrit-Tailwind-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E9%80%9F%E8%A7%88/" title="网页开发三件套(Html+CSS+Javascrit) + Tailwind 基础语法速览"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gitee.com/handsomeqing/pic/raw/master/image/html_css_javascript_tailwind_blog_profile.png" onerror="this.onerror=null;this.src='/QingBlogs/img/404.jpg'" alt="网页开发三件套(Html+CSS+Javascrit) + Tailwind 基础语法速览"/></a><div class="content"><a class="title" href="/QingBlogs/2026/03/16/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E4%B8%89%E4%BB%B6%E5%A5%97-Html-CSS-Javascrit-Tailwind-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E9%80%9F%E8%A7%88/" title="网页开发三件套(Html+CSS+Javascrit) + Tailwind 基础语法速览">网页开发三件套(Html+CSS+Javascrit) + Tailwind 基础语法速览</a><time datetime="2026-03-16T11:41:19.000Z" title="发表于 2026-03-16 19:41:19">2026-03-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/QingBlogs/2026/03/13/SEO%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/" title="SEO基础入门教程"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a53c60808351_1783875080.webp" onerror="this.onerror=null;this.src='/QingBlogs/img/404.jpg'" alt="SEO基础入门教程"/></a><div class="content"><a class="title" href="/QingBlogs/2026/03/13/SEO%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/" title="SEO基础入门教程">SEO基础入门教程</a><time datetime="2026-03-12T16:20:48.000Z" title="发表于 2026-03-13 00:20:48">2026-03-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/QingBlogs/2024/07/11/%E4%B8%80%E5%8F%A3%E6%B0%94%E5%BD%BB%E5%BA%95%E6%95%99%E4%BC%9A%E4%BD%A0%E5%89%AA%E6%98%A0%E4%B8%93%E4%B8%9A%E7%89%88/" title="一口气彻底教会你剪映专业版"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a51c0b40e8a9_1783742644.webp" onerror="this.onerror=null;this.src='/QingBlogs/img/404.jpg'" alt="一口气彻底教会你剪映专业版"/></a><div class="content"><a class="title" href="/QingBlogs/2024/07/11/%E4%B8%80%E5%8F%A3%E6%B0%94%E5%BD%BB%E5%BA%95%E6%95%99%E4%BC%9A%E4%BD%A0%E5%89%AA%E6%98%A0%E4%B8%93%E4%B8%9A%E7%89%88/" title="一口气彻底教会你剪映专业版">一口气彻底教会你剪映专业版</a><time datetime="2024-07-11T03:55:42.000Z" title="发表于 2024-07-11 11:55:42">2024-07-11</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg" alt="距离月入25k也就还差一个大佬带我~" title="距离月入25k也就还差一个大佬带我~"/><div id="runtimeTextTip"></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2022 - 2026 By <a class="footer-bar-link" href="/QingBlogs/" title="Qing" target="_blank">Qing</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        const from = '出自 ' + data.from
+        const sub = []
+        sub.unshift(data.hitokoto, from)
+        window.typed = new Typed('#footer-type-tips', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('footer-type-tips').innerHTML = data.hitokoto
+      }
+    })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.cbd.int/typed.js@2.1.0/dist/typed.umd.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/QingBlogs/archives/" title="archive"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/QingBlogs/tags/" title="tag"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/QingBlogs/categories/" title="category"><div class="headline">分类</div><div class="length-num">3</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://q-shuai.github.io/QingBlogs/" title="我的博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a51ba2cc92ae_1783740972.webp" alt="我的博客"/><span class="back-menu-item-text">我的博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">应用</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://img.scdn.io/" title="我的图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a51124d73ddd_1783697997.webp" alt="我的图床"/><span class="back-menu-item-text">我的图床</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">工具</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://globax-ai.vercel.app/" title="我的工具"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a51124fc1eb3_1783697999.webp" alt="我的工具"/><span class="back-menu-item-text">我的工具</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-book faa-tada" style="font-size: 0.9em;"></i><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill faa-tada" style="font-size: 0.9em;"></i><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-house-chimney faa-tada" style="font-size: 0.9em;"></i><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-info faa-tada" style="font-size: 0.9em;"></i><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/QingBlogs/tags/CSS/" style="font-size: 0.88rem;">CSS<sup>1</sup></a><a href="/QingBlogs/tags/HTML/" style="font-size: 0.88rem;">HTML<sup>1</sup></a><a href="/QingBlogs/tags/JavaScript/" style="font-size: 0.88rem;">JavaScript<sup>1</sup></a><a href="/QingBlogs/tags/SEO/" style="font-size: 0.88rem;">SEO<sup>1</sup></a><a href="/QingBlogs/tags/SEO%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">SEO工具<sup>1</sup></a><a href="/QingBlogs/tags/Tailwind/" style="font-size: 0.88rem;">Tailwind<sup>1</sup></a><a href="/QingBlogs/tags/%E5%85%B3%E9%94%AE%E8%AF%8D%E8%B0%83%E7%A0%94/" style="font-size: 0.88rem;">关键词调研<sup>1</sup></a><a href="/QingBlogs/tags/%E5%86%85%E5%AE%B9%E4%BC%98%E5%8C%96/" style="font-size: 0.88rem;">内容优化<sup>1</sup></a><a href="/QingBlogs/tags/%E5%89%AA%E6%98%A0/" style="font-size: 0.88rem;">剪映<sup>1</sup></a><a href="/QingBlogs/tags/%E5%89%AA%E8%BE%91%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" style="font-size: 0.88rem;">剪辑零基础教程<sup>1</sup></a><a href="/QingBlogs/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" style="font-size: 0.88rem;">基础语法<sup>1</sup></a><a href="/QingBlogs/tags/%E5%A4%96%E9%93%BE%E5%BB%BA%E8%AE%BE/" style="font-size: 0.88rem;">外链建设<sup>1</sup></a><a href="/QingBlogs/tags/%E5%BB%BA%E7%AB%99%E5%85%A5%E9%97%A8/" style="font-size: 0.88rem;">建站入门<sup>1</sup></a><a href="/QingBlogs/tags/%E6%8A%80%E6%9C%AFSEO/" style="font-size: 0.88rem;">技术SEO<sup>1</sup></a><a href="/QingBlogs/tags/%E8%A7%86%E9%A2%91%E7%BC%96%E8%BE%91/" style="font-size: 0.88rem;">视频编辑<sup>1</sup></a><a href="/QingBlogs/tags/%E9%A1%B5%E9%9D%A2SEO/" style="font-size: 0.88rem;">页面SEO<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"><a class="tag-list" href="/QingBlogs/tags/AI%E5%B7%A5%E5%85%B7" title="AI工具">AI工具</a><a class="tag-list" href="/QingBlogs/tags/VibeCoding" title="VibeCoding">VibeCoding</a><a class="tag-list" href="/QingBlogs/tags/WordPress" title="WordPress">WordPress</a><a class="tag-list" href="/QingBlogs/tags/Shopify" title="Shopify">Shopify</a><a class="tag-list" href="/QingBlogs/tags/Dify" title="Dify">Dify</a><a class="tag-list" href="/QingBlogs/tags/GTM" title="GTM">GTM</a></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/QingBlogs/js/utils.js"></script><script src="/QingBlogs/js/main.js"></script><script src="/QingBlogs/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2022 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2022 By 安知鱼 V1.7.1",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 Qing 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script src="/QingBlogs/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("04/01/2022 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg";
+        img.title = "下班了就该开开心心的玩耍，嘿嘿~";
+        img.alt = "下班了就该开开心心的玩耍，嘿嘿~";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="https://cdn.cbd.int/algoliasearch@4.18.0/dist/algoliasearch-lite.umd.js"></script><script src="https://cdn.cbd.int/instantsearch.js@4.84.0/dist/instantsearch.production.min.js"></script><script src="/QingBlogs/js/search/algolia.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://cdn.cbd.int/qrcodejs@1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/QingBlogs/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
