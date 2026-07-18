@@ -1,0 +1,640 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>Globax AI—外贸工具站-项目详情 | 🍀拾光卿筑🍀</title><meta name="keywords" content="Globax AI,外贸AI工具,AI内容生成,关键词研究,广告文案生成,博客生成"><meta name="author" content="Qing"><meta name="copyright" content="Qing"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="Globax AI—外贸工具站-项目详情"><meta name="application-name" content="Globax AI—外贸工具站-项目详情"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta name="referrer" content="no-referrer"><meta property="og:type" content="article"><meta property="og:title" content="Globax AI—外贸工具站-项目详情"><meta property="og:url" content="https://q-shuai.github.io/QingBlogs/2026/05/18/Globax-AI-%E2%80%94-%E5%A4%96%E8%B4%B8-AI-%E5%B7%A5%E5%85%B7%E7%AB%99-%E9%A1%B9%E7%9B%AE%E8%AF%A6%E8%A7%A3/index.html"><meta property="og:site_name" content="🍀拾光卿筑🍀"><meta property="og:description" content="Globax AI外贸AI工具站项目全解析——React 19 + TypeScript + Vite 8 + Supabase技术栈，深入拆解全局状态管理、多模型AI统一调用层、7大功能模块设计与数据流架构。"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://gitee.com/handsomeqing/pic/raw/master/image/Globax AI.png"><meta property="article:author" content="Qing"><meta property="article:tag" content="独立站,跨境电商,DTC品牌,WordPress,Shopify,品牌出海,SEO,广告投放,选品策略,运营笔记,Qing"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://gitee.com/handsomeqing/pic/raw/master/image/Globax AI.png"><meta name="description" content="Globax AI外贸AI工具站项目全解析——React 19 + TypeScript + Vite 8 + Supabase技术栈，深入拆解全局状态管理、多模型AI统一调用层、7大功能模块设计与数据流架构。"><link rel="shortcut icon" href="/QingBlogs/favicon.ico"><link rel="canonical" href="https://q-shuai.github.io/QingBlogs/2026/05/18/Globax-AI-%E2%80%94-%E5%A4%96%E8%B4%B8-AI-%E5%B7%A5%E5%85%B7%E7%AB%99-%E9%A1%B9%E7%9B%AE%E8%AF%A6%E8%A7%A3/"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/QingBlogs/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://img.cdn1.vip/i/6a50a244c6ba2_1783669316.webp"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/QingBlogs/',
+  preloader: {"source":3},
+  friends_vue_info: {"apiurl":null},
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["🤖️ 科技电脑爱好者","🔍 分享与热心帮助","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机"]},
+  algolia: {"appId":"KSIJ16IKKA","apiKey":"21b13f0b4c39926e022ca1acfa505090","indexName":"qingblogs","hits":{"per_page":6},"languages":{"input_placeholder":"输入关键词后按下回车查找","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: Qing","link":"链接: ","source":"来源: 🍀拾光卿筑🍀","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '🍀拾光卿筑🍀',
+  title: 'Globax AI—外贸工具站-项目详情',
+  postAI: '',
+  pageFillDescription: 'Globax AI — 外贸 AI 工具站 项目详解, 一、项目定位, 二、整体架构, 目录结构职责, 三、核心架构详解, 3.1 全局状态管理 — AppContext.tsx, 3.2 AI 调用层 — aiProvider.ts（最重要的服务）, 3.3 数据持久化 — Supabase + dataSync, 四、七大功能模块详解, 4.1 关键词研究 (KeywordResearch.tsx), 4.2 广告文案生成 (AdGenerator.tsx), 4.3 博客文章生成 (BlogPostGenerator.tsx), 4.4 Insight 共创 (InsightCoCreation.tsx), 4.5 话题管理 (TopicManager.tsx), 4.6 外链引用生成 (CitationGenerator.tsx), 4.7 配置中心 (SettingsPage.tsx), 4.8 历史记录 (HistoryRecords.tsx), 五、数据流全景, 六、关键设计亮点, 七、部署方式外贸工具站项目详解访问地址预览效果一项目定位这是一个面向外贸跨境电商从业者的办公工具箱帮助用户使用支持及第三方中转完成内容创作关键词研究广告文案生成等工作技术栈二整体架构用户浏览器全局状态侧边导航个功能页面懒加载服务层统一调用接口搜索关键词数据接口客户端云端数据同步外部依赖第三方中转搜索数据认证数据持久化目录结构职责目录职责按功能模块组织的页面组件每个模块抽象服务层调用搜索数据客户端数据同步全局状态管理存储配置用户状态通用组件侧边栏认证守卫自定义本地持久化工具函数模板三核心架构详解全局状态管理这是整个应用的大脑管理以下状态密钥中转行业背景多套业务配置包含业务信息典型客户首选模型用户选择的默认模型自定义每个功能模块的提示词都可以在配置中心自定义主题偏好亮色暗色模式侧边栏折叠状态认证状态用户登录注册登出用户画像信息云端同步登录后将配置同步到关键设计所有状态通过持久化到浏览器本地每个都包装了修改配置时自动同步到是从活跃的业务配置中动态计算出来的字符串注入到所有中调用层最重要的服务这是项目的核心引擎采用策略模式统一封装了条调用通路官方第三方中转兼容协议原生原生兜底走中转关键函数单轮对话多轮对话支持历史消息测试连接拉取可用模型列表特殊处理格式转换将的格式转为的格式的被提到请求顶层而非放入未配置时自动到中转调用模型数据持久化本地层自动将状态序列化到云端层提供认证邮箱注册登录管理配置同步表存储完整的用户配置历史记录张表存储各功能模块的历史数据数据同步流程用户登录从拉取配置写入自动同步到用户修改配置安全设计所有表启用每个用户只能读写自己的数据存储在客户端里存的也是用户自己的四七大功能模块详解关键词研究流程用户输入关键词每行一个最多个调用批量查询展示结果表格趋势图可导出技术要点调用第三方获取搜索量竞争度个月趋势并发请求每个关键词独立请求趋势数据用柱状图可视化纯无第三方图表库竞争度用进度条展示登录用户自动保存查询记录到广告文案生成流程用户填写行业关键词目标市场站内链接选择模型调用解析展示一键复制导出技术要点使用结构化的在中定义要求严格按格式返回中包含的字符限制规则标题字符描述字符等前端展示每个素材的字符数方便验证支持从中提取块容错解析博客文章生成流程用户输入标题可选副标题见解自定义要求生成完整文章渲染可下载技术要点设计遵循标准反化指令禁止使用陈词滥调如自动从生成内容中提取生图提示词支持种格式使用渲染预览可将生图提示词单独提取并导出共创这是最有特色的功能访谈员模式流程用户输入文章选题选择模型开启对话以访谈员角色发起结构化提问使用中的方法论用户与多轮对话逐步打磨思路对话充分后点击生成最终输出结构化的洞察文档核心理念做的思考用户做的选择通过压缩否定反面重构三种方法将模糊想法变为精准洞察技术要点多轮对话保持完整上下文从可跳转过来携带话题标题最终产物可生成到博客文章生成器话题管理流程手动添加话题从批量导入自动分类端端端统计面板跳转到共创博客生成技术要点使用库解析文件导入时逐个调用进行分类每个话题可关联并支持跳转到其他功能模块无缝衔接工作流统计卡片总话题数端端端待分类外链引用生成流程粘贴文章分析找出需要引用的观点搜索权威链接自动插入引用标记生成引用章节技术要点两步调用先分析事实性声明再匹配引用链接用户可以在配置中心设置优先域名如和黑名单域名如最终输出是增强后的原文引用标记章节配置中心四个行业背景管理多套业务配置选择启用哪一套注入所有配置模型选择连接测试拉取模型列表外链引用设置黑名单域名优先域名模版个功能模块的全部可自定义编辑支持变量占位符历史记录统一的云端历史数据查看器按功能模块分展示支持详情查看单条批量删除分页五数据流全景用户操作页面输入表单调用模型路由调用返回内容前端渲染图表调用关键词数据保存到如有登录六关键设计亮点统一接口动态分发条通路对上层透明用户切换模型只需改变一个参数可自定义系统所有都在配置中心可视化编辑满足高级用户需求行业背景注入配置的行业信息自动注入所有调用确保生成内容的行业相关性本地优先云端同步未登录可用全部功能数据存本地登录后自动同步到云端模块间联动话题共创博客生成形成完整的内容生产流水线纯前端架构仅存客户端零服务端存储敏感信息部署就绪配置了路由重写解决刷新问题七部署方式开发开发服务器构建产出静态文件到部署目录可部署到等任意静态托管平台当前已配置的路由重写规则总结来说这是一个设计精良的前端工具站核心思路是用赋能外贸从业者的内容生产全流程从关键词研究数据驱动话题规划共创深度思考博客广告生成内容产出引用增强权威性形成闭环',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-07-18 16:32:06',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 8.1.2"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://img.cdn1.vip/i/6a507c78177d3_1783659640.webp"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://q-shuai.github.io/QingBlogs/" title="我的博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a51ba2cc92ae_1783740972.webp" alt="我的博客"/><span class="back-menu-item-text">我的博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">应用</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://img.scdn.io/" title="我的图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a51124d73ddd_1783697997.webp" alt="我的图床"/><span class="back-menu-item-text">我的图床</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">工具</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://globax-ai.vercel.app/" title="我的工具"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a51124fc1eb3_1783697999.webp" alt="我的工具"/><span class="back-menu-item-text">我的工具</span></a></div></div></div></div><a id="site-name" href="/QingBlogs/" accesskey="h"><div class="title">🍀拾光卿筑🍀</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-book faa-tada" style="font-size: 0.9em;"></i><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill faa-tada" style="font-size: 0.9em;"></i><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-house-chimney faa-tada" style="font-size: 0.9em;"></i><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-info faa-tada" style="font-size: 0.9em;"></i><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/QingBlogs/tags/AI%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">AI工具<sup>1</sup></a><a href="/QingBlogs/tags/CSS/" style="font-size: 1.05rem;">CSS<sup>2</sup></a><a href="/QingBlogs/tags/HTML/" style="font-size: 1.05rem;">HTML<sup>2</sup></a><a href="/QingBlogs/tags/JavaScript/" style="font-size: 1.05rem;">JavaScript<sup>2</sup></a><a href="/QingBlogs/tags/LiveCanvas/" style="font-size: 1.05rem;">LiveCanvas<sup>1</sup></a><a href="/QingBlogs/tags/React/" style="font-size: 1.05rem;">React<sup>1</sup></a><a href="/QingBlogs/tags/SEO/" style="font-size: 1.05rem;">SEO<sup>1</sup></a><a href="/QingBlogs/tags/SEO%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">SEO工具<sup>1</sup></a><a href="/QingBlogs/tags/Supabase/" style="font-size: 1.05rem;">Supabase<sup>1</sup></a><a href="/QingBlogs/tags/Tailwind/" style="font-size: 1.05rem;">Tailwind<sup>2</sup></a><a href="/QingBlogs/tags/TypeScript/" style="font-size: 1.05rem;">TypeScript<sup>1</sup></a><a href="/QingBlogs/tags/Vite/" style="font-size: 1.05rem;">Vite<sup>1</sup></a><a href="/QingBlogs/tags/WordPress/" style="font-size: 1.05rem;">WordPress<sup>1</sup></a><a href="/QingBlogs/tags/%E5%85%B3%E9%94%AE%E8%AF%8D%E8%B0%83%E7%A0%94/" style="font-size: 1.05rem;">关键词调研<sup>1</sup></a><a href="/QingBlogs/tags/%E5%86%85%E5%AE%B9%E4%BC%98%E5%8C%96/" style="font-size: 1.05rem;">内容优化<sup>1</sup></a><a href="/QingBlogs/tags/%E5%89%AA%E6%98%A0/" style="font-size: 1.05rem;">剪映<sup>1</sup></a><a href="/QingBlogs/tags/%E5%89%AA%E8%BE%91%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" style="font-size: 1.05rem;">剪辑零基础教程<sup>1</sup></a><a href="/QingBlogs/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" style="font-size: 1.05rem;">基础语法<sup>1</sup></a><a href="/QingBlogs/tags/%E5%A4%96%E8%B4%B8%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">外贸工具<sup>1</sup></a><a href="/QingBlogs/tags/%E5%A4%96%E9%93%BE%E5%BB%BA%E8%AE%BE/" style="font-size: 1.05rem;">外链建设<sup>1</sup></a><a href="/QingBlogs/tags/%E5%BB%BA%E7%AB%99%E5%85%A5%E9%97%A8/" style="font-size: 1.05rem;">建站入门<sup>1</sup></a><a href="/QingBlogs/tags/%E5%BB%BA%E7%AB%99%E5%AE%9E%E6%88%98/" style="font-size: 1.05rem;">建站实战<sup>1</sup></a><a href="/QingBlogs/tags/%E6%8A%80%E6%9C%AFSEO/" style="font-size: 1.05rem;">技术SEO<sup>1</sup></a><a href="/QingBlogs/tags/%E8%A7%86%E9%A2%91%E7%BC%96%E8%BE%91/" style="font-size: 1.05rem;">视频编辑<sup>1</sup></a><a href="/QingBlogs/tags/%E9%A1%B5%E9%9D%A2SEO/" style="font-size: 1.05rem;">页面SEO<sup>1</sup></a><a href="/QingBlogs/tags/%E9%A1%B9%E7%9B%AE%E8%AF%A6%E8%A7%A3/" style="font-size: 1.05rem;">项目详解<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/QingBlogs/archives/2026/05/"><span class="card-archive-list-date">五月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/QingBlogs/archives/2026/03/"><span class="card-archive-list-date">三月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/QingBlogs/archives/2024/07/"><span class="card-archive-list-date">七月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/QingBlogs/categories/AI%E5%B7%A5%E5%85%B7/" itemprop="url">AI工具</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/QingBlogs/tags/React/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>React</span></a><a class="article-meta__tags" href="/QingBlogs/tags/TypeScript/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>TypeScript</span></a><a class="article-meta__tags" href="/QingBlogs/tags/Vite/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Vite</span></a><a class="article-meta__tags" href="/QingBlogs/tags/Supabase/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Supabase</span></a><a class="article-meta__tags" href="/QingBlogs/tags/AI%E5%B7%A5%E5%85%B7/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>AI工具</span></a><a class="article-meta__tags" href="/QingBlogs/tags/%E5%A4%96%E8%B4%B8%E5%B7%A5%E5%85%B7/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>外贸工具</span></a><a class="article-meta__tags" href="/QingBlogs/tags/%E9%A1%B9%E7%9B%AE%E8%AF%A6%E8%A7%A3/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>项目详解</span></a></span></div></div><h1 class="post-title" itemprop="name headline">Globax AI—外贸工具站-项目详情</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2026-05-18T08:24:40.000Z" title="发表于 2026-05-18 16:24:40">2026-05-18</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2026-07-18T08:32:06.433Z" title="更新于 2026-07-18 16:32:06">2026-07-18</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">2.4k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="Globax AI—外贸工具站-项目详情"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为广州"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>广州</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://gitee.com/handsomeqing/pic/raw/master/image/Globax AI.png"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://q-shuai.github.io/QingBlogs/2026/05/18/Globax-AI-%E2%80%94-%E5%A4%96%E8%B4%B8-AI-%E5%B7%A5%E5%85%B7%E7%AB%99-%E9%A1%B9%E7%9B%AE%E8%AF%A6%E8%A7%A3/"><header><a class="post-meta-categories" href="/QingBlogs/categories/AI%E5%B7%A5%E5%85%B7/" itemprop="url">AI工具</a><a href="/QingBlogs/tags/React/" tabindex="-1" itemprop="url">React</a><a href="/QingBlogs/tags/TypeScript/" tabindex="-1" itemprop="url">TypeScript</a><a href="/QingBlogs/tags/Vite/" tabindex="-1" itemprop="url">Vite</a><a href="/QingBlogs/tags/Supabase/" tabindex="-1" itemprop="url">Supabase</a><a href="/QingBlogs/tags/AI%E5%B7%A5%E5%85%B7/" tabindex="-1" itemprop="url">AI工具</a><a href="/QingBlogs/tags/%E5%A4%96%E8%B4%B8%E5%B7%A5%E5%85%B7/" tabindex="-1" itemprop="url">外贸工具</a><a href="/QingBlogs/tags/%E9%A1%B9%E7%9B%AE%E8%AF%A6%E8%A7%A3/" tabindex="-1" itemprop="url">项目详解</a><h1 id="CrawlerTitle" itemprop="name headline">Globax AI—外贸工具站-项目详情</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">Qing</span><time itemprop="dateCreated datePublished" datetime="2026-05-18T08:24:40.000Z" title="发表于 2026-05-18 16:24:40">2026-05-18</time><time itemprop="dateCreated datePublished" datetime="2026-07-18T08:32:06.433Z" title="更新于 2026-07-18 16:32:06">2026-07-18</time></header><h1 id="Globax-AI-—-外贸-AI-工具站-项目详解"><a href="#Globax-AI-—-外贸-AI-工具站-项目详解" class="headerlink" title="Globax AI — 外贸 AI 工具站 项目详解"></a>Globax AI — 外贸 AI 工具站 项目详解</h1><p>访问地址：<a target="_blank" rel="noopener" href="https://globax-ai.vercel.app/login">https://globax-ai.vercel.app/login</a></p>
+<p>预览效果：<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gitee.com/handsomeqing/pic/raw/master/image/Doubao_DSiFJxGWzy.png" alt="Doubao_DSiFJxGWzy"></p>
+<h2 id="一、项目定位"><a href="#一、项目定位" class="headerlink" title="一、项目定位"></a>一、项目定位</h2><p>这是一个<strong>面向外贸（跨境电商&#x2F;B2B）从业者的 AI 办公工具箱</strong>，帮助用户使用 AI（支持 OpenAI GPT-4o、Google Gemini、Anthropic Claude 及第三方中转 API）完成内容创作、关键词研究、广告文案生成等工作。</p>
+<p><strong>技术栈</strong>：React 19 + TypeScript + Vite 8 + React Router 7 + Supabase + CSS Modules</p>
+<hr>
+<h2 id="二、整体架构"><a href="#二、整体架构" class="headerlink" title="二、整体架构"></a>二、整体架构</h2><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">用户浏览器 (SPA)</span><br><span class="line">├── React App (App.tsx)</span><br><span class="line">│   ├── AppProvider (全局状态 Context)</span><br><span class="line">│   ├── Router (React Router 7)</span><br><span class="line">│   ├── Sidebar (侧边导航)</span><br><span class="line">│   └── 7 个功能页面 (懒加载)</span><br><span class="line">├── 服务层</span><br><span class="line">│   ├── aiProvider.ts     → 统一 AI 调用接口</span><br><span class="line">│   ├── searchProvider.ts → 搜索/关键词数据接口</span><br><span class="line">│   ├── supabaseClient.ts → Supabase 客户端</span><br><span class="line">│   └── dataSync.ts       → 云端数据同步 CRUD</span><br><span class="line">└── 外部依赖</span><br><span class="line">    ├── AI API (OpenAI / Gemini / Claude / 第三方中转)</span><br><span class="line">    ├── Serper API (搜索数据)</span><br><span class="line">    └── Supabase (认证 + PostgreSQL 数据持久化)</span><br></pre></td></tr></table></figure>
+
+<h3 id="目录结构职责"><a href="#目录结构职责" class="headerlink" title="目录结构职责"></a>目录结构职责</h3><table>
+<thead>
+<tr>
+<th>目录</th>
+<th>职责</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>src/features/</code></td>
+<td>按功能模块组织的页面组件，每个模块 <code>.tsx</code> + <code>.module.css</code></td>
+</tr>
+<tr>
+<td><code>src/services/</code></td>
+<td>抽象服务层：AI 调用、搜索数据、Supabase 客户端、数据同步</td>
+</tr>
+<tr>
+<td><code>src/context/</code></td>
+<td>全局状态管理（React Context），存储 API Keys、配置、用户状态</td>
+</tr>
+<tr>
+<td><code>src/components/</code></td>
+<td>通用组件：侧边栏 <code>Sidebar</code>、认证守卫 <code>AuthGuard</code></td>
+</tr>
+<tr>
+<td><code>src/hooks/</code></td>
+<td>自定义 Hook：<code>useLocalStorage</code>（本地持久化）</td>
+</tr>
+<tr>
+<td><code>src/utils/</code></td>
+<td>工具函数 + Prompt 模板</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="三、核心架构详解"><a href="#三、核心架构详解" class="headerlink" title="三、核心架构详解"></a>三、核心架构详解</h2><h3 id="3-1-全局状态管理-—-AppContext-tsx"><a href="#3-1-全局状态管理-—-AppContext-tsx" class="headerlink" title="3.1 全局状态管理 — AppContext.tsx"></a>3.1 全局状态管理 — <code>AppContext.tsx</code></h3><p>这是整个应用的”大脑”，管理以下状态：</p>
+<ul>
+<li><strong>API 密钥</strong>：OpenAI Key、Gemini Key、Claude Key、中转 API Key、Serper Key</li>
+<li><strong>行业背景</strong>：多套”业务配置”（Business Profile），包含业务信息、典型客户</li>
+<li><strong>首选模型</strong>：用户选择的默认 AI 模型</li>
+<li><strong>自定义 Prompt</strong>：每个功能模块的提示词都可以在配置中心自定义</li>
+<li><strong>主题&#x2F;UI 偏好</strong>：亮色&#x2F;暗色模式、侧边栏折叠状态</li>
+<li><strong>认证状态</strong>：用户登录&#x2F;注册&#x2F;登出，用户画像信息</li>
+<li><strong>云端同步</strong>：登录后将 LocalStorage 配置同步到 Supabase</li>
+</ul>
+<p><strong>关键设计</strong>：</p>
+<ul>
+<li>所有状态通过 <code>useLocalStorage</code> Hook 持久化到浏览器本地</li>
+<li>每个 setter 都包装了 <code>pushToCloud()</code>，修改配置时自动同步到 Supabase</li>
+<li><code>industryBackground</code> 是从活跃的业务配置中<strong>动态计算</strong>出来的字符串，注入到所有 AI Prompt 中</li>
+</ul>
+<h3 id="3-2-AI-调用层-—-aiProvider-ts（最重要的服务）"><a href="#3-2-AI-调用层-—-aiProvider-ts（最重要的服务）" class="headerlink" title="3.2 AI 调用层 — aiProvider.ts（最重要的服务）"></a>3.2 AI 调用层 — <code>aiProvider.ts</code>（最重要的服务）</h3><p>这是项目的核心引擎，采用 <strong>策略模式</strong> 统一封装了 4 条 AI 调用通路：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">callChat(messages, model)</span><br><span class="line">├── openai / gpt-4o / gpt-4o-mini  → OpenAI 官方 API</span><br><span class="line">├── proxy                          → 第三方中转 (OpenAI 兼容协议)</span><br><span class="line">├── gemini / gemini-1.5-*          → Google Gemini 原生 API</span><br><span class="line">├── claude / claude-3-5-*          → Anthropic Claude 原生 API</span><br><span class="line">└── default                        → 兜底走中转</span><br></pre></td></tr></table></figure>
+
+<p>关键函数：</p>
+<ul>
+<li><code>callAI(prompt, systemPrompt, model)</code> — 单轮对话（system + user）</li>
+<li><code>callChat(messages, model)</code> — 多轮对话（支持历史消息）</li>
+<li><code>testConnection(provider, config)</code> — 测试 API 连接</li>
+<li><code>fetchModels(baseUrl, apiKey)</code> — 拉取可用模型列表</li>
+</ul>
+<p><strong>特殊处理</strong>：</p>
+<ul>
+<li>Gemini API 格式转换：将 OpenAI 的 <code>messages</code> 格式转为 Gemini 的 <code>contents</code> + <code>system_instruction</code> 格式</li>
+<li>Claude 的 system prompt 被提到请求顶层而非放入 messages</li>
+<li>Claude Key 未配置时，自动 fallback 到中转 API 调用 Claude 模型</li>
+</ul>
+<h3 id="3-3-数据持久化-—-Supabase-dataSync"><a href="#3-3-数据持久化-—-Supabase-dataSync" class="headerlink" title="3.3 数据持久化 — Supabase + dataSync"></a>3.3 数据持久化 — Supabase + dataSync</h3><p><strong>本地层</strong>：<code>useLocalStorage</code> Hook，自动将状态 JSON 序列化到 <code>localStorage</code></p>
+<p><strong>云端层</strong>：Supabase 提供：</p>
+<ul>
+<li><strong>认证</strong>：邮箱注册&#x2F;登录，Session 管理</li>
+<li><strong>配置同步</strong>：<code>user_config</code> 表（JSONB）存储完整的用户配置</li>
+<li><strong>历史记录</strong>：6 张表存储各功能模块的历史数据</li>
+</ul>
+<p>数据同步流程：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">用户登录 → ensureProfile() → syncFromCloudInternal()</span><br><span class="line">         → 从 Supabase 拉取配置 → 写入 React state → 自动同步到 localStorage</span><br><span class="line">         </span><br><span class="line">用户修改配置 → setter → pushToCloud() → saveUserConfig() → Supabase UPSERT</span><br></pre></td></tr></table></figure>
+
+<p>安全设计（RLS）：</p>
+<ul>
+<li>所有表启用 Row Level Security</li>
+<li>每个用户只能读写自己的数据（<code>auth.uid() = user_id</code>）</li>
+<li>API Key 存储在客户端，Supabase 里存的也是用户自己的 Key</li>
+</ul>
+<hr>
+<h2 id="四、七大功能模块详解"><a href="#四、七大功能模块详解" class="headerlink" title="四、七大功能模块详解"></a>四、七大功能模块详解</h2><h3 id="4-1-关键词研究-KeywordResearch-tsx"><a href="#4-1-关键词研究-KeywordResearch-tsx" class="headerlink" title="4.1 关键词研究 (KeywordResearch.tsx)"></a>4.1 关键词研究 (<code>KeywordResearch.tsx</code>)</h3><p><strong>流程</strong>：用户输入关键词（每行一个，最多100个） → 调用 Search API 批量查询 → 展示结果表格 + 趋势图 → 可导出 CSV</p>
+<p><strong>技术要点</strong>：</p>
+<ul>
+<li>调用第三方 API <code>ke.octoo.top</code> 获取搜索量、CPC、竞争度、12个月趋势</li>
+<li>并发请求（<code>Promise.all</code>），每个关键词独立请求</li>
+<li>趋势数据用 CSS 柱状图可视化（纯 CSS，无第三方图表库）</li>
+<li>竞争度用进度条展示</li>
+<li>登录用户自动保存查询记录到 Supabase</li>
+</ul>
+<h3 id="4-2-广告文案生成-AdGenerator-tsx"><a href="#4-2-广告文案生成-AdGenerator-tsx" class="headerlink" title="4.2 广告文案生成 (AdGenerator.tsx)"></a>4.2 广告文案生成 (<code>AdGenerator.tsx</code>)</h3><p><strong>流程</strong>：用户填写行业关键词 + 目标市场 + 站内链接 → 选择模型 → 调用 AI → 解析 JSON → 展示 Headlines&#x2F;Descriptions&#x2F;Sitelinks&#x2F;Callouts → 一键复制&#x2F;导出 CSV</p>
+<p><strong>技术要点</strong>：</p>
+<ul>
+<li>使用结构化的 System Prompt（在 <code>defaultPrompts.ts</code> 中定义），要求 AI 严格按 JSON 格式返回</li>
+<li>Prompt 中包含 Google Ads 的字符限制规则（标题30字符、描述90字符等）</li>
+<li>前端展示每个素材的字符数，方便验证</li>
+<li>支持从 JSON 中提取 <code>&#123;...&#125;</code> 块（容错解析）</li>
+</ul>
+<h3 id="4-3-博客文章生成-BlogPostGenerator-tsx"><a href="#4-3-博客文章生成-BlogPostGenerator-tsx" class="headerlink" title="4.3 博客文章生成 (BlogPostGenerator.tsx)"></a>4.3 博客文章生成 (<code>BlogPostGenerator.tsx</code>)</h3><p><strong>流程</strong>：用户输入标题 →（可选）副标题&#x2F;见解&#x2F;自定义要求 → AI 生成完整文章 → Markdown 渲染 → 可下载 .md</p>
+<p><strong>技术要点</strong>：</p>
+<ul>
+<li>Prompt 设计遵循 EEAT（Experience, Expertise, Authoritativeness, Trustworthiness）标准</li>
+<li>“反 AI 化”指令：禁止使用陈词滥调（如 “In today’s fast-paced world…”）</li>
+<li>自动从生成内容中提取 AI 生图提示词（支持 6 种 Markdown 格式）</li>
+<li>使用 <code>markdown-to-jsx</code> 渲染 Markdown 预览</li>
+<li>可将 AI 生图提示词单独提取并导出</li>
+</ul>
+<h3 id="4-4-Insight-共创-InsightCoCreation-tsx"><a href="#4-4-Insight-共创-InsightCoCreation-tsx" class="headerlink" title="4.4 Insight 共创 (InsightCoCreation.tsx)"></a>4.4 Insight 共创 (<code>InsightCoCreation.tsx</code>)</h3><p>这是最有特色的功能——<strong>AI 访谈员模式</strong>：</p>
+<p><strong>流程</strong>：</p>
+<ol>
+<li>用户输入文章选题 → 选择 AI 模型 → 开启对话</li>
+<li>AI 以”访谈员”角色发起结构化提问（使用 <code>/public/SKILL.md</code> 中的方法论）</li>
+<li>用户与 AI 多轮对话，逐步打磨思路</li>
+<li>对话充分后，点击”生成最终 Insight” → AI 输出结构化的洞察文档</li>
+</ol>
+<p><strong>核心理念</strong>：AI 做 80% 的思考，用户做 20% 的选择。通过 Compress（压缩）、Negate（否定&#x2F;反面）、Reconstruct（重构）三种方法将模糊想法变为精准洞察。</p>
+<p><strong>技术要点</strong>：</p>
+<ul>
+<li>多轮对话（<code>callChat</code>），保持完整上下文</li>
+<li>从 <code>TopicManager</code> 可跳转过来（携带话题标题）</li>
+<li>最终产物可生成到博客文章生成器</li>
+</ul>
+<h3 id="4-5-话题管理-TopicManager-tsx"><a href="#4-5-话题管理-TopicManager-tsx" class="headerlink" title="4.5 话题管理 (TopicManager.tsx)"></a>4.5 话题管理 (<code>TopicManager.tsx</code>)</h3><p><strong>流程</strong>：手动添加话题 &#x2F; 从 Excel 批量导入 → AI 自动分类（B端&#x2F;C端&#x2F;BC端）→ 统计面板 → 跳转到 Insight 共创 &#x2F; 博客生成</p>
+<p><strong>技术要点</strong>：</p>
+<ul>
+<li>使用 <code>xlsx</code> 库解析 Excel 文件</li>
+<li>导入时逐个调用 AI 进行 B&#x2F;C 分类</li>
+<li>每个话题可关联 Insight，并支持跳转到其他功能模块（无缝衔接工作流）</li>
+<li>统计卡片：总话题数 &#x2F; B端 &#x2F; C端 &#x2F; BC端 &#x2F; 待分类</li>
+</ul>
+<h3 id="4-6-外链引用生成-CitationGenerator-tsx"><a href="#4-6-外链引用生成-CitationGenerator-tsx" class="headerlink" title="4.6 外链引用生成 (CitationGenerator.tsx)"></a>4.6 外链引用生成 (<code>CitationGenerator.tsx</code>)</h3><p><strong>流程</strong>：粘贴文章 → Step 1: AI 分析找出需要引用的观点 → Step 2: AI 搜索权威链接 → 自动插入引用标记 <code>[^1]</code> → 生成引用章节</p>
+<p><strong>技术要点</strong>：</p>
+<ul>
+<li>两步 AI 调用：先分析事实性声明（claim extraction），再匹配引用链接</li>
+<li>用户可以在配置中心设置”优先域名”（如 wikipedia.org）和”黑名单域名”（如 youtube.com）</li>
+<li>最终输出是增强后的 Markdown（原文 + 引用标记 + References 章节）</li>
+</ul>
+<h3 id="4-7-配置中心-SettingsPage-tsx"><a href="#4-7-配置中心-SettingsPage-tsx" class="headerlink" title="4.7 配置中心 (SettingsPage.tsx)"></a>4.7 配置中心 (<code>SettingsPage.tsx</code>)</h3><p>四个 Tab：</p>
+<ul>
+<li><strong>行业背景</strong>：管理多套业务配置（Business Profile），选择启用哪一套 → 注入所有 AI Prompt</li>
+<li><strong>AI 配置</strong>：API Base URL + Key + 模型选择 + 连接测试 + 拉取模型列表</li>
+<li><strong>外链引用设置</strong>：黑名单域名 + 优先域名</li>
+<li><strong>Prompt 模版</strong>：7 个功能模块的 System Prompt 全部可自定义编辑，支持变量占位符 <code>&#123;&#123;variable&#125;&#125;</code></li>
+</ul>
+<h3 id="4-8-历史记录-HistoryRecords-tsx"><a href="#4-8-历史记录-HistoryRecords-tsx" class="headerlink" title="4.8 历史记录 (HistoryRecords.tsx)"></a>4.8 历史记录 (<code>HistoryRecords.tsx</code>)</h3><p>统一的云端历史数据查看器，按功能模块分 Tab 展示，支持详情查看、单条&#x2F;批量删除、分页。</p>
+<hr>
+<h2 id="五、数据流全景"><a href="#五、数据流全景" class="headerlink" title="五、数据流全景"></a>五、数据流全景</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">用户操作</span><br><span class="line">   │</span><br><span class="line">   ▼</span><br><span class="line">Feature 页面 (输入表单)</span><br><span class="line">   │</span><br><span class="line">   ├──→ 调用 useAI().callAI() / callChat()</span><br><span class="line">   │       │</span><br><span class="line">   │       ▼</span><br><span class="line">   │    aiProvider.ts (模型路由 + API 调用)</span><br><span class="line">   │       │</span><br><span class="line">   │       ▼</span><br><span class="line">   │    OpenAI / Gemini / Claude API</span><br><span class="line">   │       │</span><br><span class="line">   │       ▼</span><br><span class="line">   │    AI 返回内容 → 前端渲染 (Markdown / JSON / 图表)</span><br><span class="line">   │</span><br><span class="line">   ├──→ 调用 useSearch().searchKeywords()</span><br><span class="line">   │       │</span><br><span class="line">   │       ▼</span><br><span class="line">   │    Serper API → 关键词数据</span><br><span class="line">   │</span><br><span class="line">   └──→ 保存到 Supabase (如有登录)</span><br><span class="line">           │</span><br><span class="line">           ▼</span><br><span class="line">       dataSync.ts → Supabase PostgreSQL</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="六、关键设计亮点"><a href="#六、关键设计亮点" class="headerlink" title="六、关键设计亮点"></a>六、关键设计亮点</h2><ol>
+<li><strong>统一 AI 接口 + 动态分发</strong>：4 条 AI 通路对上层透明，用户切换模型只需改变一个参数</li>
+<li><strong>可自定义 Prompt 系统</strong>：所有 System Prompt 都在配置中心可视化编辑，满足高级用户需求</li>
+<li><strong>行业背景注入</strong>：配置的行业信息自动注入所有 AI 调用，确保生成内容的行业相关性</li>
+<li><strong>本地优先 + 云端同步</strong>：未登录可用全部功能（数据存本地），登录后自动同步到云端</li>
+<li><strong>模块间联动</strong>：话题 → Insight 共创 → 博客生成，形成完整的内容生产流水线</li>
+<li><strong>纯前端架构</strong>：API Key 仅存客户端，零服务端存储敏感信息</li>
+<li><strong>Vercel 部署就绪</strong>：配置了 SPA 路由重写，解决刷新 404 问题</li>
+</ol>
+<hr>
+<h2 id="七、部署方式"><a href="#七、部署方式" class="headerlink" title="七、部署方式"></a>七、部署方式</h2><ul>
+<li>开发：<code>npm run dev</code>（Vite 开发服务器）</li>
+<li>构建：<code>npm run build</code>（产出静态文件到 <code>dist/</code>）</li>
+<li>部署：<code>dist/</code> 目录可部署到 Vercel、GitHub Pages 等任意静态托管平台</li>
+<li>当前已配置 <a href="vscode-webview://0ioihmc2tm352goo6r7ve1b8n51i8gbb4qml5ra459oph6eu67eg/vercel.json">vercel.json</a> 的 SPA 路由重写规则</li>
+</ul>
+<hr>
+<p>总结来说，这是一个设计精良的前端 AI 工具站，核心思路是<strong>用 AI 赋能外贸从业者的内容生产全流程</strong>——从关键词研究（数据驱动）→ 话题规划 → Insight 共创（深度思考）→ 博客&#x2F;广告生成（内容产出）→ 引用增强（权威性），形成闭环。</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/QingBlogs/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a507c78177d3_1783659640.webp" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a507c78177d3_1783659640.webp" title="头像" alt="头像"></a><div class="post-copyright__author_name">Qing</div><div class="post-copyright__author_desc"></div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://q-shuai.github.io/QingBlogs/2026/05/18/Globax-AI-%E2%80%94-%E5%A4%96%E8%B4%B8-AI-%E5%B7%A5%E5%85%B7%E7%AB%99-%E9%A1%B9%E7%9B%AE%E8%AF%A6%E8%A7%A3/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://q-shuai.github.io/QingBlogs/2026/05/18/Globax-AI-%E2%80%94-%E5%A4%96%E8%B4%B8-AI-%E5%B7%A5%E5%85%B7%E7%AB%99-%E9%A1%B9%E7%9B%AE%E8%AF%A6%E8%A7%A3/')">Globax AI—外贸工具站-项目详情</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://q-shuai.github.io/QingBlogs/2026/05/18/Globax-AI-%E2%80%94-%E5%A4%96%E8%B4%B8-AI-%E5%B7%A5%E5%85%B7%E7%AB%99-%E9%A1%B9%E7%9B%AE%E8%AF%A6%E8%A7%A3/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=Globax AI—外贸工具站-项目详情&amp;url=https://q-shuai.github.io/QingBlogs/2026/05/18/Globax-AI-%E2%80%94-%E5%A4%96%E8%B4%B8-AI-%E5%B7%A5%E5%85%B7%E7%AB%99-%E9%A1%B9%E7%9B%AE%E8%AF%A6%E8%A7%A3/&amp;pic=https://gitee.com/handsomeqing/pic/raw/master/image/Globax AI.png" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://q-shuai.github.io/QingBlogs" target="_blank">🍀拾光卿筑🍀</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/QingBlogs/tags/React/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>React<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/QingBlogs/tags/TypeScript/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>TypeScript<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/QingBlogs/tags/Vite/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Vite<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/QingBlogs/tags/Supabase/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Supabase<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/QingBlogs/tags/AI%E5%B7%A5%E5%85%B7/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>AI工具<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/QingBlogs/tags/%E5%A4%96%E8%B4%B8%E5%B7%A5%E5%85%B7/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>外贸工具<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/QingBlogs/tags/%E9%A1%B9%E7%9B%AE%E8%AF%A6%E8%A7%A3/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>项目详解<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://gitee.com/handsomeqing/pic/raw/master/image/Globax AI.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/QingBlogs/2026/03/17/%E5%BB%BA%E7%AB%99%E4%BA%BA%E5%91%98%E5%BF%85%E4%BF%AE%E8%AF%BE%EF%BC%9AHTML-CSS-JS-Tailwind%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88LiveCanvas-%E5%AE%9E%E6%88%98%E7%AF%87%EF%BC%89/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gitee.com/handsomeqing/pic/raw/master/image/LiveCanvas_practice.png" onerror="onerror=null;src='/QingBlogs/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">建站人员必修课：HTML+CSS+JS+Tailwind学习笔记（LiveCanvas 实战篇）</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a507c78177d3_1783659640.webp" onerror="this.onerror=null;this.src='/QingBlogs/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description">我是Qing, 在这里记录从0到1学习独立站建站与运营的全过程. 从技术选型到流量变现, 从选品策略到品牌塑造, 每一个踏过的坑都是通往自由的阶梯.</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/QingBlogs/"><h1 class="author-info__name">Qing</h1><div class="author-info__desc"></div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/Q-Shuai" target="_blank" title="Github"></a></div></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://img.cdn1.vip/i/6a511c55bd40b_1783700565.webp) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Globax-AI-%E2%80%94-%E5%A4%96%E8%B4%B8-AI-%E5%B7%A5%E5%85%B7%E7%AB%99-%E9%A1%B9%E7%9B%AE%E8%AF%A6%E8%A7%A3"><span class="toc-number">1.</span> <span class="toc-text">Globax AI — 外贸 AI 工具站 项目详解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%A1%B9%E7%9B%AE%E5%AE%9A%E4%BD%8D"><span class="toc-number">1.1.</span> <span class="toc-text">一、项目定位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84"><span class="toc-number">1.2.</span> <span class="toc-text">二、整体架构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E8%81%8C%E8%B4%A3"><span class="toc-number">1.2.1.</span> <span class="toc-text">目录结构职责</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%A0%B8%E5%BF%83%E6%9E%B6%E6%9E%84%E8%AF%A6%E8%A7%A3"><span class="toc-number">1.3.</span> <span class="toc-text">三、核心架构详解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%85%A8%E5%B1%80%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86-%E2%80%94-AppContext-tsx"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.1 全局状态管理 — AppContext.tsx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-AI-%E8%B0%83%E7%94%A8%E5%B1%82-%E2%80%94-aiProvider-ts%EF%BC%88%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E6%9C%8D%E5%8A%A1%EF%BC%89"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.2 AI 调用层 — aiProvider.ts（最重要的服务）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96-%E2%80%94-Supabase-dataSync"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.3 数据持久化 — Supabase + dataSync</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E4%B8%83%E5%A4%A7%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97%E8%AF%A6%E8%A7%A3"><span class="toc-number">1.4.</span> <span class="toc-text">四、七大功能模块详解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E5%85%B3%E9%94%AE%E8%AF%8D%E7%A0%94%E7%A9%B6-KeywordResearch-tsx"><span class="toc-number">1.4.1.</span> <span class="toc-text">4.1 关键词研究 (KeywordResearch.tsx)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E5%B9%BF%E5%91%8A%E6%96%87%E6%A1%88%E7%94%9F%E6%88%90-AdGenerator-tsx"><span class="toc-number">1.4.2.</span> <span class="toc-text">4.2 广告文案生成 (AdGenerator.tsx)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E7%94%9F%E6%88%90-BlogPostGenerator-tsx"><span class="toc-number">1.4.3.</span> <span class="toc-text">4.3 博客文章生成 (BlogPostGenerator.tsx)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-Insight-%E5%85%B1%E5%88%9B-InsightCoCreation-tsx"><span class="toc-number">1.4.4.</span> <span class="toc-text">4.4 Insight 共创 (InsightCoCreation.tsx)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-%E8%AF%9D%E9%A2%98%E7%AE%A1%E7%90%86-TopicManager-tsx"><span class="toc-number">1.4.5.</span> <span class="toc-text">4.5 话题管理 (TopicManager.tsx)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-6-%E5%A4%96%E9%93%BE%E5%BC%95%E7%94%A8%E7%94%9F%E6%88%90-CitationGenerator-tsx"><span class="toc-number">1.4.6.</span> <span class="toc-text">4.6 外链引用生成 (CitationGenerator.tsx)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-7-%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83-SettingsPage-tsx"><span class="toc-number">1.4.7.</span> <span class="toc-text">4.7 配置中心 (SettingsPage.tsx)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-8-%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95-HistoryRecords-tsx"><span class="toc-number">1.4.8.</span> <span class="toc-text">4.8 历史记录 (HistoryRecords.tsx)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%95%B0%E6%8D%AE%E6%B5%81%E5%85%A8%E6%99%AF"><span class="toc-number">1.5.</span> <span class="toc-text">五、数据流全景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1%E4%BA%AE%E7%82%B9"><span class="toc-number">1.6.</span> <span class="toc-text">六、关键设计亮点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F"><span class="toc-number">1.7.</span> <span class="toc-text">七、部署方式</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/QingBlogs/2026/05/18/Globax-AI-%E2%80%94-%E5%A4%96%E8%B4%B8-AI-%E5%B7%A5%E5%85%B7%E7%AB%99-%E9%A1%B9%E7%9B%AE%E8%AF%A6%E8%A7%A3/" title="Globax AI—外贸工具站-项目详情"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gitee.com/handsomeqing/pic/raw/master/image/Globax AI.png" onerror="this.onerror=null;this.src='/QingBlogs/img/404.jpg'" alt="Globax AI—外贸工具站-项目详情"/></a><div class="content"><a class="title" href="/QingBlogs/2026/05/18/Globax-AI-%E2%80%94-%E5%A4%96%E8%B4%B8-AI-%E5%B7%A5%E5%85%B7%E7%AB%99-%E9%A1%B9%E7%9B%AE%E8%AF%A6%E8%A7%A3/" title="Globax AI—外贸工具站-项目详情">Globax AI—外贸工具站-项目详情</a><time datetime="2026-05-18T08:24:40.000Z" title="发表于 2026-05-18 16:24:40">2026-05-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/QingBlogs/2026/03/17/%E5%BB%BA%E7%AB%99%E4%BA%BA%E5%91%98%E5%BF%85%E4%BF%AE%E8%AF%BE%EF%BC%9AHTML-CSS-JS-Tailwind%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88LiveCanvas-%E5%AE%9E%E6%88%98%E7%AF%87%EF%BC%89/" title="建站人员必修课：HTML+CSS+JS+Tailwind学习笔记（LiveCanvas 实战篇）"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gitee.com/handsomeqing/pic/raw/master/image/LiveCanvas_practice.png" onerror="this.onerror=null;this.src='/QingBlogs/img/404.jpg'" alt="建站人员必修课：HTML+CSS+JS+Tailwind学习笔记（LiveCanvas 实战篇）"/></a><div class="content"><a class="title" href="/QingBlogs/2026/03/17/%E5%BB%BA%E7%AB%99%E4%BA%BA%E5%91%98%E5%BF%85%E4%BF%AE%E8%AF%BE%EF%BC%9AHTML-CSS-JS-Tailwind%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88LiveCanvas-%E5%AE%9E%E6%88%98%E7%AF%87%EF%BC%89/" title="建站人员必修课：HTML+CSS+JS+Tailwind学习笔记（LiveCanvas 实战篇）">建站人员必修课：HTML+CSS+JS+Tailwind学习笔记（LiveCanvas 实战篇）</a><time datetime="2026-03-17T08:23:31.000Z" title="发表于 2026-03-17 16:23:31">2026-03-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/QingBlogs/2026/03/16/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E4%B8%89%E4%BB%B6%E5%A5%97-Html-CSS-Javascrit-Tailwind-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E9%80%9F%E8%A7%88/" title="网页开发三件套(Html+CSS+Javascrit) + Tailwind 基础语法速览"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gitee.com/handsomeqing/pic/raw/master/image/html_css_javascript_tailwind_blog_profile.png" onerror="this.onerror=null;this.src='/QingBlogs/img/404.jpg'" alt="网页开发三件套(Html+CSS+Javascrit) + Tailwind 基础语法速览"/></a><div class="content"><a class="title" href="/QingBlogs/2026/03/16/%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E4%B8%89%E4%BB%B6%E5%A5%97-Html-CSS-Javascrit-Tailwind-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E9%80%9F%E8%A7%88/" title="网页开发三件套(Html+CSS+Javascrit) + Tailwind 基础语法速览">网页开发三件套(Html+CSS+Javascrit) + Tailwind 基础语法速览</a><time datetime="2026-03-16T11:41:19.000Z" title="发表于 2026-03-16 19:41:19">2026-03-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/QingBlogs/2026/03/13/SEO%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/" title="SEO基础入门教程"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a53c60808351_1783875080.webp" onerror="this.onerror=null;this.src='/QingBlogs/img/404.jpg'" alt="SEO基础入门教程"/></a><div class="content"><a class="title" href="/QingBlogs/2026/03/13/SEO%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/" title="SEO基础入门教程">SEO基础入门教程</a><time datetime="2026-03-12T16:20:48.000Z" title="发表于 2026-03-13 00:20:48">2026-03-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/QingBlogs/2024/07/11/%E4%B8%80%E5%8F%A3%E6%B0%94%E5%BD%BB%E5%BA%95%E6%95%99%E4%BC%9A%E4%BD%A0%E5%89%AA%E6%98%A0%E4%B8%93%E4%B8%9A%E7%89%88/" title="一口气彻底教会你剪映专业版"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a51c0b40e8a9_1783742644.webp" onerror="this.onerror=null;this.src='/QingBlogs/img/404.jpg'" alt="一口气彻底教会你剪映专业版"/></a><div class="content"><a class="title" href="/QingBlogs/2024/07/11/%E4%B8%80%E5%8F%A3%E6%B0%94%E5%BD%BB%E5%BA%95%E6%95%99%E4%BC%9A%E4%BD%A0%E5%89%AA%E6%98%A0%E4%B8%93%E4%B8%9A%E7%89%88/" title="一口气彻底教会你剪映专业版">一口气彻底教会你剪映专业版</a><time datetime="2024-07-11T03:55:42.000Z" title="发表于 2024-07-11 11:55:42">2024-07-11</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg" alt="距离月入25k也就还差一个大佬带我~" title="距离月入25k也就还差一个大佬带我~"/><div id="runtimeTextTip"></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2022 - 2026 By <a class="footer-bar-link" href="/QingBlogs/" title="Qing" target="_blank">Qing</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        const from = '出自 ' + data.from
+        const sub = []
+        sub.unshift(data.hitokoto, from)
+        window.typed = new Typed('#footer-type-tips', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('footer-type-tips').innerHTML = data.hitokoto
+      }
+    })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.cbd.int/typed.js@2.1.0/dist/typed.umd.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/QingBlogs/archives/" title="archive"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/QingBlogs/tags/" title="tag"><div class="headline">标签</div><div class="length-num">26</div></a><a href="/QingBlogs/categories/" title="category"><div class="headline">分类</div><div class="length-num">4</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://q-shuai.github.io/QingBlogs/" title="我的博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a51ba2cc92ae_1783740972.webp" alt="我的博客"/><span class="back-menu-item-text">我的博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">应用</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://img.scdn.io/" title="我的图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a51124d73ddd_1783697997.webp" alt="我的图床"/><span class="back-menu-item-text">我的图床</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">工具</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://globax-ai.vercel.app/" title="我的工具"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.cdn1.vip/i/6a51124fc1eb3_1783697999.webp" alt="我的工具"/><span class="back-menu-item-text">我的工具</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-book faa-tada" style="font-size: 0.9em;"></i><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill faa-tada" style="font-size: 0.9em;"></i><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-house-chimney faa-tada" style="font-size: 0.9em;"></i><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-info faa-tada" style="font-size: 0.9em;"></i><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/QingBlogs/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/QingBlogs/tags/AI%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem; font-weight: 500; color: var(--anzhiyu-lighttext)">AI工具<sup>1</sup></a><a href="/QingBlogs/tags/CSS/" style="font-size: 0.88rem;">CSS<sup>2</sup></a><a href="/QingBlogs/tags/HTML/" style="font-size: 0.88rem;">HTML<sup>2</sup></a><a href="/QingBlogs/tags/JavaScript/" style="font-size: 0.88rem;">JavaScript<sup>2</sup></a><a href="/QingBlogs/tags/LiveCanvas/" style="font-size: 0.88rem; font-weight: 500; color: var(--anzhiyu-lighttext)">LiveCanvas<sup>1</sup></a><a href="/QingBlogs/tags/React/" style="font-size: 0.88rem;">React<sup>1</sup></a><a href="/QingBlogs/tags/SEO/" style="font-size: 0.88rem;">SEO<sup>1</sup></a><a href="/QingBlogs/tags/SEO%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">SEO工具<sup>1</sup></a><a href="/QingBlogs/tags/Supabase/" style="font-size: 0.88rem;">Supabase<sup>1</sup></a><a href="/QingBlogs/tags/Tailwind/" style="font-size: 0.88rem;">Tailwind<sup>2</sup></a><a href="/QingBlogs/tags/TypeScript/" style="font-size: 0.88rem;">TypeScript<sup>1</sup></a><a href="/QingBlogs/tags/Vite/" style="font-size: 0.88rem;">Vite<sup>1</sup></a><a href="/QingBlogs/tags/WordPress/" style="font-size: 0.88rem; font-weight: 500; color: var(--anzhiyu-lighttext)">WordPress<sup>1</sup></a><a href="/QingBlogs/tags/%E5%85%B3%E9%94%AE%E8%AF%8D%E8%B0%83%E7%A0%94/" style="font-size: 0.88rem;">关键词调研<sup>1</sup></a><a href="/QingBlogs/tags/%E5%86%85%E5%AE%B9%E4%BC%98%E5%8C%96/" style="font-size: 0.88rem;">内容优化<sup>1</sup></a><a href="/QingBlogs/tags/%E5%89%AA%E6%98%A0/" style="font-size: 0.88rem;">剪映<sup>1</sup></a><a href="/QingBlogs/tags/%E5%89%AA%E8%BE%91%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" style="font-size: 0.88rem;">剪辑零基础教程<sup>1</sup></a><a href="/QingBlogs/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" style="font-size: 0.88rem;">基础语法<sup>1</sup></a><a href="/QingBlogs/tags/%E5%A4%96%E8%B4%B8%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">外贸工具<sup>1</sup></a><a href="/QingBlogs/tags/%E5%A4%96%E9%93%BE%E5%BB%BA%E8%AE%BE/" style="font-size: 0.88rem;">外链建设<sup>1</sup></a><a href="/QingBlogs/tags/%E5%BB%BA%E7%AB%99%E5%85%A5%E9%97%A8/" style="font-size: 0.88rem;">建站入门<sup>1</sup></a><a href="/QingBlogs/tags/%E5%BB%BA%E7%AB%99%E5%AE%9E%E6%88%98/" style="font-size: 0.88rem;">建站实战<sup>1</sup></a><a href="/QingBlogs/tags/%E6%8A%80%E6%9C%AFSEO/" style="font-size: 0.88rem;">技术SEO<sup>1</sup></a><a href="/QingBlogs/tags/%E8%A7%86%E9%A2%91%E7%BC%96%E8%BE%91/" style="font-size: 0.88rem;">视频编辑<sup>1</sup></a><a href="/QingBlogs/tags/%E9%A1%B5%E9%9D%A2SEO/" style="font-size: 0.88rem;">页面SEO<sup>1</sup></a><a href="/QingBlogs/tags/%E9%A1%B9%E7%9B%AE%E8%AF%A6%E8%A7%A3/" style="font-size: 0.88rem;">项目详解<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"><a class="tag-list" href="/QingBlogs/tags/AI%E5%B7%A5%E5%85%B7" title="AI工具">AI工具</a><a class="tag-list" href="/QingBlogs/tags/VibeCoding" title="VibeCoding">VibeCoding</a><a class="tag-list" href="/QingBlogs/tags/WordPress" title="WordPress">WordPress</a><a class="tag-list" href="/QingBlogs/tags/Shopify" title="Shopify">Shopify</a><a class="tag-list" href="/QingBlogs/tags/Dify" title="Dify">Dify</a><a class="tag-list" href="/QingBlogs/tags/GTM" title="GTM">GTM</a></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/QingBlogs/js/utils.js"></script><script src="/QingBlogs/js/main.js"></script><script src="/QingBlogs/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2022 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2022 By 安知鱼 V1.7.1",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 Qing 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script src="/QingBlogs/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("04/01/2022 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg";
+        img.title = "下班了就该开开心心的玩耍，嘿嘿~";
+        img.alt = "下班了就该开开心心的玩耍，嘿嘿~";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="https://cdn.cbd.int/algoliasearch@4.18.0/dist/algoliasearch-lite.umd.js"></script><script src="https://cdn.cbd.int/instantsearch.js@4.84.0/dist/instantsearch.production.min.js"></script><script src="/QingBlogs/js/search/algolia.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://cdn.cbd.int/qrcodejs@1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/QingBlogs/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
